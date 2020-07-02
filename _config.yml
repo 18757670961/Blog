@@ -58,26 +58,23 @@ highlight:
 SEOTitle: Desmond的杂货铺 | Desmond's Blog
 header-img: img/home-bg.jpg
 email: l840376507@outlook.com
-description: ""
+description: "Right here, bury the past and sow the future"
 keyword: ""
 
 # SNS settings
-# RSS: false
-weibo_username:     
-zhihu_username:     
-github_username:    
+# RSS: false  
+github_username: 18757670961  
 twitter_username:   
 facebook_username:  
-linkedin_username:  
+linkedin_username: Shuguang LYU
 
 # Build settings
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 
 # Disqus settings
-disqus_username: hexo-theme-huxblog
+disqus_username: shuguanglyu
 
 # Duoshuo settings
-# duoshuo_username: kaijun
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true  # set to false if you want to use Comment without Sharing
 
@@ -90,7 +87,7 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true  # whether or not using Sidebar.
-sidebar-about-description: "Never be a BDPer"
+sidebar-about-description: "Coder + Designer + BDPer"
 sidebar-avatar: img/avatar.jpg  # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
@@ -100,23 +97,11 @@ featured-condition-size: 1  # A tag will be featured if the size of it is more t
 # Friends
 friends: [
     {
-        title: "Kaijun's Blog",
-        href: "http://blog.kaijun.rocks"
+        title: "",
+        href: ""
     },{
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
-    },{
-        title: "Foo",
-        href: "#"
-    },{
-        title: "Bar",
-        href: "#"
-    },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
-        href: "#"
+        title: "",
+        href: ""
     }
 ]
 
@@ -163,3 +148,33 @@ deploy:
   type: git
   repository: https://github.com/18757670961/18757670961.github.io
   branch: master
+
+# Performance optimization
+filter_optimize:
+  enable: true
+  # remove the surrounding comments in each of the bundled files
+  remove_comments: false
+  css:
+    # minify all css files
+    minify: true
+    # bundle loaded css files into one
+    bundle: true
+    # use a script block to load css elements dynamically
+    delivery: true
+    # make specific css content inline into the html page
+    #   - only support the full path
+    #   - default is ['css/main.css']
+    inlines:
+    excludes:
+  js:
+    # minify all js files
+    minify: true
+    # bundle loaded js files into one
+    bundle: true
+    excludes:
+  # set the priority of this plugin,
+  # lower means it will be executed first, default of Hexo is 10
+  priority: 12
+
+# Code beautify
+all_minifier: true

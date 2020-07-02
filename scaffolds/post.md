@@ -9,4 +9,6 @@ mathjax: true
 summary:
 tags:
 categories:
+comments: true
+iframe: "http://huangxuan.me/js-module-7day/" # keynote layout
 ---
