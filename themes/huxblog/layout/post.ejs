@@ -45,6 +45,11 @@ layout: layout
                 col-md-10 col-md-offset-1
                 post-container">
 
+                <button type="button" class="btn btn-outline-secondary btn-sm">
+                    <span class="page-count">字数:<%= wordcount(page.content) %></span>
+                    &nbsp;
+                    <span class="page-count">阅读时长:<%= min2read(page.content) %></span>
+                </button>
                 <%- page.content %>
 
                 <hr>

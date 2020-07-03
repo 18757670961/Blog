@@ -14,7 +14,10 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://shuguang.tech
 root: /
-permalink: :year/:month/:day/:title/
+permalink: archives/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 permalink_defaults:
 
 # Directory
@@ -179,3 +182,19 @@ all_minifier: true
 # local search
 local_search:
   enable: true
+
+# word count
+word_count: true
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+# RSS订阅
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+type: atom
+path: atom.xml
+limit: 20
+
+
