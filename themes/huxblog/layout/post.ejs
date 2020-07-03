@@ -48,8 +48,16 @@ layout: layout
                 <button type="button" class="btn btn-outline-secondary btn-sm">
                     <span class="page-count">字数:<%= wordcount(page.content) %></span>
                     &nbsp;
-                    <span class="page-count">阅读时长:<%= min2read(page.content) %></span>
+                    <span class="page-count">阅读时长:<%= min2read(page.content) %>分</span>
+                    &nbsp;
+                    <% if (theme.busuanzi && theme.busuanzi.enable){ %>
+                    <!-- 不蒜子统计 -->
+                    <span id="busuanzi_container_page_pv" class="page-count">
+                        阅读数:<span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    <% } %>
                 </button>
+
                 <%- page.content %>
 
                 <hr>
