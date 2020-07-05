@@ -18,13 +18,14 @@ permalink: archives/:abbrlink.html
 abbrlink:
   alg: crc32  # 算法：crc16(default) and crc32
   rep: hex    # 进制：dec(default) and hex
+  auto_category: false
 permalink_defaults:
 
 # Directory
 source_dir: source
 public_dir: public
 tag_dir: tags
-archive_dir: i_dont_wanna_use_default_archives
+archive_dir: customized_archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
@@ -52,7 +53,7 @@ highlight:
   hljs: false
 
 
-# Custom Setting Start
+# Custom Setting Start #############################################################
 
 # Site settings
 SEOTitle: Desmond的避难所 | Desmond's Blog
@@ -64,8 +65,8 @@ keyword: ""
 # SNS settings
 # RSS: false  
 github_username: 18757670961  
-twitter_username:   
-facebook_username:  
+twitter_username: shuguanglv
+facebook_username: 100010091077225
 linkedin_username: shuguang-lyu-7371311a3
 
 # Build settings
@@ -73,17 +74,6 @@ anchorjs: true # if you want to customize anchor. check out line:181 of `post.ht
 
 # Disqus settings
 disqus_username: shuguang-tech
-
-# Duoshuo settings
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true  # set to false if you want to use Comment without Sharing
-
-# Analytics settings
-# Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
-# Google Analytics
-ga_track_id: 'UA-49627206-1' # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true  # whether or not using Sidebar.
@@ -105,7 +95,7 @@ friends: [
     }
 ]
 
-#Custom Setting End
+# Custom Setting End ######################################################################################
 
 
 # Category & Tag
@@ -146,8 +136,11 @@ theme: huxblog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/18757670961/18757670961.github.io
+  repository: https://18757670961:lsg13566753240@e.coding.net/shuguanglv/shuguanglv/shuguanglv.git
   branch: master
+  # - type: git
+  #   repository: https://github.com/18757670961/18757670961.github.io
+  #   branch: master
 
 # Performance optimization
 filter_optimize:
