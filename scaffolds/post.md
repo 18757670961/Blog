@@ -1,12 +1,8 @@
 ---
 title: {{ title }}
 date: {{ date }}
-top: false
-cover: false
-password:
-toc: true
+author: Desmond
 mathjax: true
-summary:
 tags:
 categories:
 ---
