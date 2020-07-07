@@ -75,18 +75,10 @@ layout: layout
                 <hr>
 
                 <div class="alert alert-info" role="alert">
-                    Use the forum (Disqus/Livere) available for you to leave a lovely comment ^_^
+                    Leave your lovely comment below ^_^
                 </div>
 
-                <% if(config['disqus_username']) { %>
-                <!-- disqus 评论框 start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- disqus 评论框 end -->
-                <% } %>
-
-                <hr>
+                <br>
 
                 <!-- 来必力City版安装代码 -->
                 <div id="lv-container" data-id="city" data-uid="MTAyMC81MDg5NC8yNzM3Ng==">
@@ -129,23 +121,6 @@ layout: layout
     </div>
 </article>
 
-<% if(config['disqus_username']) { %>
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "<%= config['disqus_username'] %>";
-    var disqus_identifier = "<%= page.permalink %>";
-    var disqus_url = "<%= page.permalink %>";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-<% } %>
-
 <!-- 来必力City版安装代码 -->
 <script type="text/javascript">
     (function (d, s) {
@@ -161,6 +136,29 @@ layout: layout
 
         e.parentNode.insertBefore(j, e);
     })(document, 'script');
+</script>
+
+<!-- resize header to fullscreen keynotes -->
+<script>
+    var $header = document.getElementsByTagName("header")[0];
+    function resize(){
+        /*
+         * leave 85px to both
+         * - told/imply users that there has more content below
+         * - let user can scroll in mobile device, seeing the keynote-view is unscrollable
+         */
+        $header.style.height = (window.innerHeight-85) + 'px';
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+        resize();
+    })
+    window.addEventListener('load', function(){
+        resize();
+    })
+    window.addEventListener('resize', function(){
+        resize();
+    })
+    resize();
 </script>
 
 <% if(config['anchorjs']) { %>

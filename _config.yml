@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: true # insert img:![<图片 Alt 文本>](./<本文标题>/<图片名称>)
 relative_link: false
 future: true
 highlight:
@@ -71,9 +71,6 @@ linkedin_username: shuguang-lyu-7371311a3
 
 # Build settings
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
-
-# Disqus settings
-disqus_username: shuguang-tech
 
 # Sidebar settings
 sidebar: true  # whether or not using Sidebar.
@@ -141,65 +138,3 @@ deploy:
   # - type: git
   #   repository: https://github.com/18757670961/18757670961.github.io
   #   branch: master
-
-# Performance optimization
-filter_optimize:
-  enable: true
-  # remove the surrounding comments in each of the bundled files
-  remove_comments: false
-  css:
-    # minify all css files
-    minify: true
-    # bundle loaded css files into one
-    bundle: true
-    # use a script block to load css elements dynamically
-    delivery: true
-    # make specific css content inline into the html page
-    #   - only support the full path
-    #   - default is ['css/main.css']
-    inlines:
-    excludes:
-  js:
-    # minify all js files
-    minify: true
-    # bundle loaded js files into one
-    bundle: true
-    excludes:
-  # set the priority of this plugin,
-  # lower means it will be executed first, default of Hexo is 10
-  priority: 12
-
-# Code beautify
-all_minifier: true
-
-# local search
-local_search:
-  enable: true
-
-# word count
-word_count: true
-
-# Extensions
-## Plugins: http://hexo.io/plugins/
-# RSS订阅
-plugin:
-- hexo-generator-feed
-#Feed Atom
-feed:
-type: atom
-path: atom.xml
-limit: 20
-
-markdown_it_plus:
-    highlight: true
-    html: true
-    xhtmlOut: true
-    breaks: true
-    langPrefix:
-    linkify: true
-    typographer:
-    quotes: “”‘’
-    plugins:
-        - plugin:
-            name: markdown-it-toc-and-anchor
-            enable: false
