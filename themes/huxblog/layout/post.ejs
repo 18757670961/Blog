@@ -9,7 +9,7 @@ layout: layout
 <!-- Post Header -->
 <style type="text/css">
     .intro-header{
-        background-image: url('<%= page["header-img"] || config.root + config["header-img"] %>')
+        background-image: url('<%= page["header-img"] || config.root + config["header-img"] %>');
     }
 </style>
 <header class="intro-header" >
@@ -22,8 +22,8 @@ layout: layout
                           <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
                         <% }) %>
                     </div>
-                    <h1><%= page.title %></h1>
-                    <h2 class="subheading"><%= page.subtitle || "" %></h2>
+                    <h2><%= page.title %></h2>
+                    <h3 class="subheading"><%= page.subtitle || "" %></h3>
                     <span class="meta">
                         Posted by <%- page.author || config.author %> on
                         <%= page.date.format(config.date_format) %>
@@ -59,6 +59,7 @@ layout: layout
                     </span>
                     <% } %>
                 </span>
+                <br><br>
 
                 <%- page.content %>
 
