@@ -2,7 +2,8 @@
 layout: layout
 ---
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('<%= config.root %><%= page["header-img"] || config["header-img"] %>')">
+<header class="intro-header"
+    style="background-image: url('<%= config.root %><%= page["header-img"] || config["header-img"] %>')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
@@ -33,7 +34,7 @@ layout: layout
                 });
             %>
 
-             <!-- 归档列表 -->
+            <!-- 归档列表 -->
 
             <% Object.keys(years).reverse().forEach(function(year){  %>
             <div class="one-tag-list">
@@ -41,22 +42,22 @@ layout: layout
                     <span class="tag-text"><%= year %></span>
                 </span>
                 <ul>
-                <% years[year].map(function(post){  %>
-                  <!-- <li class="listing-item">
+                    <% years[year].map(function(post){  %>
+                    <!-- <li class="listing-item">
                   <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
-                 <li >
-                    <%= post.date.format('MM-DD') %>
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="<%- config.root %><%- post.path %>" style="color: #0085a1">
-                        <span>
-                            <%- post.title || "Untitled" %>
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                <% }) %>
+                    <li>
+                        <%= post.date.format('MM-DD') %>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        <a href="<%- config.root %><%- post.path %>" style="color: #0085a1">
+                            <span>
+                                <%- post.title || "Untitled" %>
+                            </span>
+                        </a>
+                        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                    </li>
+                    <% }) %>
                 </ul>
             </div>
             <% }) %>

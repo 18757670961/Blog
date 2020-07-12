@@ -21,7 +21,7 @@ layout: page
         Posted by <%- post.author || config.author %> on
         <%= post.date.format(config.date_format) %>
     </p>
-  
+
 
 </div>
 <% }); %>
@@ -31,14 +31,13 @@ layout: page
 
 <ul class="pager">
     <% if (page.prev){ %>
-        <li class="previous">
-            <a href="<%- config.root %><%- page.prev_link %>">&larr; Newer Posts</a>
-        </li>
+    <li class="previous">
+        <a href="<%- config.root %><%- page.prev_link %>">&larr; Newer Posts</a>
+    </li>
     <% } %>
     <% if (page.next){ %>
-        <li class="next">
-            <a href="<%- config.root %><%- page.next_link %>">Older Posts &rarr;</a>
-        </li>
+    <li class="next">
+        <a href="<%- config.root %><%- page.next_link %>">Older Posts &rarr;</a>
+    </li>
     <% } %>
 </ul>
-

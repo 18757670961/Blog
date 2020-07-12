@@ -8,7 +8,7 @@ subtitle: bury the past, sow the future
 keywords:
 author: Shuguang LYU
 language: zh-CN
-timezone: 
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -16,8 +16,8 @@ url: https://shuguang.tech
 root: /
 permalink: archives/:abbrlink.html
 abbrlink:
-  alg: crc32  # 算法：crc16(default) and crc32
-  rep: hex    # 进制：dec(default) and hex
+  alg: crc32 # 算法：crc16(default) and crc32
+  rep: hex # 进制：dec(default) and hex
   auto_category: false
 permalink_defaults:
 
@@ -38,7 +38,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: true # insert img:![<图片 Alt 文本>](./<本文标题>/<图片名称>)
@@ -48,10 +48,9 @@ highlight:
   enable: true
   line_number: true
   auto_detect: true
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
-
 
 # Custom Setting Start #############################################################
 
@@ -63,8 +62,8 @@ description: "bury the past, sow the future"
 keyword: ""
 
 # SNS settings
-# RSS: false  
-github_username: 18757670961  
+# RSS: false
+github_username: 18757670961
 twitter_username: shuguanglv
 facebook_username: 100010091077225
 linkedin_username: shuguang-lyu-7371311a3
@@ -73,27 +72,18 @@ linkedin_username: shuguang-lyu-7371311a3
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 
 # Sidebar settings
-sidebar: true  # whether or not using Sidebar.
+sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "Coder + Designer + BDPer"
-sidebar-avatar: img/avatar.jpg  # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/avatar.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
-featured-tags: true  # whether or not using Feature-Tags
-featured-condition-size: 0  # A tag will be featured if the size of it is more than this condition value
+featured-tags: true # whether or not using Feature-Tags
+featured-condition-size: 0 # A tag will be featured if the size of it is more than this condition value
 
 # Friends
-friends: [
-    {
-        title: "",
-        href: ""
-    },{
-        title: "",
-        href: ""
-    }
-]
+friends: [{ title: "", href: "" }, { title: "", href: "" }]
 
 # Custom Setting End ######################################################################################
-
 
 # Category & Tag
 default_category: uncategorized

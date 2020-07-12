@@ -8,18 +8,19 @@ layout: layout
 
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header{
+    header.intro-header {
         /*background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')*/
         height: 500px;
         overflow: hidden;
     }
-    header iframe{
+
+    header iframe {
         width: 100%;
         height: 100%;
         border: 0;
     }
 </style>
-<header class="intro-header" >
+<header class="intro-header">
     <iframe src="<%= page.iframe %>">
         <div class="container">
             <div class="row">
@@ -27,7 +28,8 @@ layout: layout
                     <div class="post-heading">
                         <div class="tags">
                             <% page.tags.forEach(function(tag){ %>
-                              <a class="tag" href="<%= config.root %><%= tag.path %>" title="<%= tag.name %>"><%= tag.name %></a>
+                            <a class="tag" href="<%= config.root %><%= tag.path %>"
+                                title="<%= tag.name %>"><%= tag.name %></a>
                             <% }) %>
                         </div>
 
@@ -49,7 +51,7 @@ layout: layout
     <div class="container">
         <div class="row">
 
-    <!-- Post Container -->
+            <!-- Post Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
@@ -61,14 +63,16 @@ layout: layout
 
                 <ul class="pager">
                     <% if (page.prev){ %>
-                        <li class="previous">
-                            <a href="<%- config.root %><%- page.prev_link %>" data-toggle="tooltip" data-placement="top" title="<%- page.prev.title %>">&larr; Previous Post</a>
-                        </li>
+                    <li class="previous">
+                        <a href="<%- config.root %><%- page.prev_link %>" data-toggle="tooltip" data-placement="top"
+                            title="<%- page.prev.title %>">&larr; Previous Post</a>
+                    </li>
                     <% } %>
                     <% if (page.next){ %>
-                        <li class="next">
-                            <a href="<%- config.root %><%- page.next_link %>" data-toggle="tooltip" data-placement="top" title="<%- page.next.title %>">Next Post &rarr;</a>
-                        </li>
+                    <li class="next">
+                        <a href="<%- config.root %><%- page.next_link %>" data-toggle="tooltip" data-placement="top"
+                            title="<%- page.next.title %>">Next Post &rarr;</a>
+                    </li>
                     <% } %>
                 </ul>
 
@@ -78,15 +82,13 @@ layout: layout
                     Leave your lovely comment below ^_^
                 </div>
 
-                <br>
-
                 <!-- 来必力City版安装代码 -->
                 <div id="lv-container" data-id="city" data-uid="MTAyMC81MDg5NC8yNzM3Ng==">
                 </div>
 
             </div>
 
-    <!-- Sidebar Container -->
+            <!-- Sidebar Container -->
 
             <div class="
                 col-lg-8 col-lg-offset-2
@@ -111,7 +113,7 @@ layout: layout
                 <ul class="list-inline">
 
                     <% config.friends.forEach(function(friend){ %>
-                        <li><a href="<%= friend.href %>"><%= friend.title %></a></li>
+                    <li><a href="<%= friend.href %>"><%= friend.title %></a></li>
                     <% }); %>
                 </ul>
                 <% }%>
@@ -141,21 +143,22 @@ layout: layout
 <!-- resize header to fullscreen keynotes -->
 <script>
     var $header = document.getElementsByTagName("header")[0];
-    function resize(){
+
+    function resize() {
         /*
          * leave 85px to both
          * - told/imply users that there has more content below
          * - let user can scroll in mobile device, seeing the keynote-view is unscrollable
          */
-        $header.style.height = (window.innerHeight-85) + 'px';
+        $header.style.height = (window.innerHeight - 85) + 'px';
     }
-    document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('DOMContentLoaded', function () {
         resize();
     })
-    window.addEventListener('load', function(){
+    window.addEventListener('load', function () {
         resize();
     })
-    window.addEventListener('resize', function(){
+    window.addEventListener('resize', function () {
         resize();
     })
     resize();
@@ -164,22 +167,27 @@ layout: layout
 <% if(config['anchorjs']) { %>
 <!-- async load function -->
 <script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+    function async (u, c) {
+        var d = document,
+            t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function (e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
-    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+    async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
         anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
+            visible: 'always',
+            placement: 'right',
+            icon: '#'
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
@@ -187,11 +195,11 @@ layout: layout
 <style>
     /* place left on bigger screen */
     @media all and (min-width: 800px) {
-        .anchorjs-link{
+        .anchorjs-link {
             position: absolute;
             left: -0.75em;
             font-size: 1.1em;
-            margin-top : -0.1em;
+            margin-top: -0.1em;
         }
     }
 </style>
