@@ -79,4 +79,186 @@ top:
   // 需要两个标志序列, 分别记录节点是否出现在两个队列中 
   ```
 
-  
+
+------
+
+
+
+#### [**Catch That Cow**](http://poj.org/problem?id=3278)
+
+```c++
+#include <iostream>
+#include <cstring>
+#include <queue>
+using namespace std;
+
+int N, K;
+const int MAXN = 100000;
+int visited[MAXN + 10] = {0}; // 判重
+
+struct Step
+{
+    int x;     // 位置
+    int steps; // 到达x所需步数
+    Step(int xx, int ss) : x(xx), steps(ss) {}
+};
+
+queue<Step> q; // 队列 - open表
+
+int main()
+{
+    cin >> N >> K;
+    q.push(Step(N, 0));
+    visited[N] = 1;
+
+    while (!q.empty())
+    {
+        Step s = q.front();
+
+        if (s.x == K)
+        {
+            cout << s.steps << endl;
+            return 0;
+        }
+        else
+        {
+            if (s.x - 1 >= 0 && !visited[s.x - 1])
+            {
+                q.push(Step(s.x - 1, s.steps + 1));
+                visited[s.x - 1] = 1;
+            }
+
+            if (s.x + 1 <= MAXN && !visited[s.x + 1])
+            {
+                q.push(Step(s.x + 1, s.steps + 1));
+                visited[s.x + 1] = 1;
+            }
+
+            if (s.x * 2 <= MAXN && !visited[s.x * 2])
+            {
+                q.push(Step(s.x * 2, s.steps + 1));
+                visited[s.x * 2] = 1;
+            }
+
+            q.pop();
+        }
+    }
+}
+```
+
+------
+
+
+
+#### [迷宫问题](http://bailian.openjudge.cn/practice/4127)
+
+**思路**：
+
+- 基础广搜。先将起始位置入队列
+- 每次从队列拿出一个元素，扩展其相邻的4个元素入队列 （要判重）， 直到队头元素为终点为止。队列里的元素记录了指向父节点（上一步）的指针
+- 队列不能用 STL 的 queue 或 deque，要自己写。用一维数组实现，维护一个队头指针和队尾指针
+
+```c++
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int maze[5][5];
+int visited[5][5] = {0}; // 判重
+
+struct Pos
+{
+    int r, c; // 位置
+    int f;
+} queue[25];
+
+int head = 0;
+int tail = 0;
+int current = 0;
+
+int main()
+{
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            cin >> maze[i][j];
+        }
+    }
+
+    queue[head].r = 0;
+    queue[head].c = 0;
+    queue[head].f = -1;
+    current++;
+    visited[0][0] = 1;
+
+    while (head <= tail)
+    {
+        Pos p = queue[head];
+
+        if (p.r == 4 && p.c == 4)
+        {
+            vector<Pos> path;
+            while (p.f != -1)
+            {
+                path.push_back(p);
+                p = queue[p.f];
+            }
+            path.push_back(p);
+
+            for (int i = path.size() - 1; i >= 0; i--)
+            {
+                cout << "(" << path[i].r << ", " << path[i].c << ")" << endl;
+            }
+
+            return 0;
+        }
+        else
+        {
+            int f = head;
+            head++;
+
+            if (p.r - 1 >= 0 && maze[p.r - 1][p.c] != 1 && !visited[p.r - 1][p.c])
+            {
+                queue[current].r = p.r - 1;
+                queue[current].c = p.c;
+                queue[current].f = f;
+                current++;
+                tail++;
+                visited[p.r - 1][p.c] = 1;
+            }
+
+            if (p.r + 1 < 5 && maze[p.r + 1][p.c] != 1 && !visited[p.r + 1][p.c])
+            {
+                queue[current].r = p.r + 1;
+                queue[current].c = p.c;
+                queue[current].f = f;
+                current++;
+                tail++;
+                visited[p.r + 1][p.c] = 1;
+            }
+
+            if (p.c - 1 >= 0 && maze[p.r][p.c - 1] != 1 && !visited[p.r][p.c - 1])
+            {
+                queue[current].r = p.r;
+                queue[current].c = p.c - 1;
+                queue[current].f = f;
+                current++;
+                tail++;
+                visited[p.r][p.c - 1] = 1;
+            }
+
+            if (p.c + 1 < 5 && maze[p.r][p.c + 1] != 1 && !visited[p.r][p.c + 1])
+            {
+                queue[current].r = p.r;
+                queue[current].c = p.c + 1;
+                queue[current].f = f;
+                current++;
+                tail++;
+                visited[p.r][p.c + 1] = 1;
+            }
+        }
+    }
+}
+```
+
