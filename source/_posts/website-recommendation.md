@@ -78,6 +78,14 @@ When designing your great pieces, there are some useful sites you're recommended
 - [古田路9号](https://www.gtn9.com/)
 
   品牌创意/版权保护平台. 2005年7月创立, 以服务设计师/广告公司/创意人为核心, 以探讨专业品牌创意为基础内容, 致力于打造中国最知名的版权保护专业品牌创意网站. 也是国内各大设计组织活动的官方媒体, 并与国内各大品牌设计公司形成战略合作伙伴
+  
+- [Typo/graphic posters](https://www.typographicposters.com/)
+
+  It focus exclusively on typographical and graphical posters, those that challenge type, colors and shapes to express a message.
+
+- [Inspiration DE](https://www.inspirationde.com/)
+
+- [Designspiration](https://www.designspiration.com/)
 
 
 
