@@ -1,7 +1,6 @@
 ---
 title: Data Structure
 author: Desmond
-iframe: 'http://huangxuan.me/js-module-7day/'
 tags: Algorithm
 catalog: true
 abbrlink: a87953b2

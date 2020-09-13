@@ -1,7 +1,6 @@
 ---
 title: Desmond's whisper
 author: Desmond
-iframe: 'http://huangxuan.me/js-module-7day/'
 tags: Literal
 abbrlink: cf3be2e6
 date: 2020-07-12 23:45:41

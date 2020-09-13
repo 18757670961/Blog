@@ -1,7 +1,6 @@
 ---
 title: Advanced Search
 author: Desmond
-iframe: 'http://huangxuan.me/js-module-7day/'
 catalog: true
 tags: Algorithm
 abbrlink: 2f400e37

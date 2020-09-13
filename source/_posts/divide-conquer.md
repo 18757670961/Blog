@@ -1,7 +1,6 @@
 ---
 title: Divide and Conquer
 author: Desmond
-iframe: 'http://huangxuan.me/js-module-7day/'
 catalog: true
 abbrlink: c9bcb73c
 date: 2020-07-26 22:42:32

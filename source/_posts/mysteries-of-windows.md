@@ -1,7 +1,6 @@
 ---
 title: Cheat Sheet (Windows)
 author: Desmond
-iframe: 'http://huangxuan.me/js-module-7day/'
 catalog: true
 tags: Windows
 abbrlink: 50abf9ec
@@ -47,31 +46,31 @@ top:
 
 ```powershell
 select disk 0
-选择要创建分区结构的硬盘为硬盘0。如果有多块硬盘可以使用 list disk 命令查看。
+# 选择要创建分区结构的硬盘为硬盘0。如果有多块硬盘可以使用 list disk 命令查看。
 
 clean
-清除硬盘所以数据及分区结构，请谨慎操作。
+# 清除硬盘所以数据及分区结构，请谨慎操作。
 
 create partition primary size=350
-创建大小为 350MB 的主分区，此分区即为系统分区。
+# 创建大小为 350MB 的主分区，此分区即为系统分区。
 
 format quick fs=ntfs label=”System”
-格式化系统分区并使用 NTFS 文件系统，设置卷标为 System。
+# 格式化系统分区并使用 NTFS 文件系统，设置卷标为 System。
 
 active
-设置系统分区为“活动（active）”。
+# 设置系统分区为“活动（active）”。
 
 create partition primary size=30000
-创建大小为 30GB 的主分区，此分区即为 Windows 分区。
+# 创建大小为 30GB 的主分区，此分区即为 Windows 分区。
 
 format quick fs=ntfs label=”Windows”
-格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
+# 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
 
 assign letter=”C”
-设置 Windows 分区盘符为 C:。
+# 设置 Windows 分区盘符为 C:。
 
 exit
-退出 DiskPart 命令操作界面。
+# 退出 DiskPart 命令操作界面。
 ```
 
 ### 推荐分区结构
@@ -82,40 +81,40 @@ exit
 
 ```powershell
 select disk 0
-选择要创建分区结构的硬盘为硬盘0。如果有多块硬盘可以使用 list disk 命令查看。
+# 选择要创建分区结构的硬盘为硬盘0。如果有多块硬盘可以使用 list disk 命令查看。
 
 clean
-清除硬盘所以数据及分区结构，请谨慎操作。
+# 清除硬盘所以数据及分区结构，请谨慎操作。
 
 create partition primary size=350
-创建大小为 350MB 的主分区，此分区即为系统分区。
+# 创建大小为 350MB 的主分区，此分区即为系统分区。
 
 format quick fs=ntfs label=”System”
-格式化系统分区并使用 NTFS 文件系统，设置卷标为 System。
+# 格式化系统分区并使用 NTFS 文件系统，设置卷标为 System。
 
 active
-设置系统分区为“活动（active）”。
+# 设置系统分区为“活动（active）”。
 
 create partition primary size=30000
-创建大小为 30GB 的主分区，此分区即为 Windows 分区。
+# 创建大小为 30GB 的主分区，此分区即为 Windows 分区。
 
 format quick fs=ntfs label=”Windows”
-格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
+# 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
 
 assign letter=C
-设置 Windows 分区盘符为 C:。
+# 设置 Windows 分区盘符为 C:。
 
 create partition primary size=10000
-创建大小为 10GB 的主分区，此分区即为恢复分区。
+# 创建大小为 10GB 的主分区，此分区即为恢复分区。
 
 format quick fs=ntfs label=”Recovery”
-格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Recovery。
+# 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Recovery。
 
 set id=27
-设置恢复分区为隐藏分区。
+# 设置恢复分区为隐藏分区。
 
 exit
-退出 DiskPart 命令操作界面。
+# 退出 DiskPart 命令操作界面。
 ```
 
 同时，可以把上述命令保存至 txt 文本文件（createvol.txt），例如保存至 d 盘，然后使用 WinPE 或操作系统安装盘启动至命令提示符输入 diskpart/s d:\createvol.txt 命令等待其执行完成即可
@@ -132,46 +131,46 @@ exit
 
 ```powershell
 select disk 0
-选择要创建分区结构的硬盘为硬盘1，如果有多块硬盘可以使用 list disk 命令查看
+# 选择要创建分区结构的硬盘为硬盘1，如果有多块硬盘可以使用 list disk 命令查看
 
 clean
-清除硬盘所有数据及分区结构，请谨慎操作。
+# 清除硬盘所有数据及分区结构，请谨慎操作。
 
 convert gpt
-转换分区表为 GPT 格式。
+# 转换分区表为 GPT 格式。
 
 create partition primary size=300
-创建大小为 300MB 的主分区，此分区即为 WinRE 恢复分区。
+# 创建大小为 300MB 的主分区，此分区即为 WinRE 恢复分区。
 
 format quick fs=ntfs label=”WinRE”
-格式化 WinRE 恢复分区并使用 NTFS 文件系统，设置卷标为 WinRE。
+# 格式化 WinRE 恢复分区并使用 NTFS 文件系统，设置卷标为 WinRE。
 
 set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
-设置 WinRE 恢复分区为隐藏分区。
+# 设置 WinRE 恢复分区为隐藏分区。
 
 gpt attributes=0x8000000000000001
-设置 WinRE 恢复分区不能在磁盘管理器中被删除。
+# 设置 WinRE 恢复分区不能在磁盘管理器中被删除。
 
 create partition efi size=100
-创建大小为 100MB 的主分区，此分区即为 ESP 分区。
+# 创建大小为 100MB 的主分区，此分区即为 ESP 分区。
 
 format quick fs=fat32 label=”System”
-格式化 ESP 分区并使用 FAT32 文件系统，设置卷标为 System。
+# 格式化 ESP 分区并使用 FAT32 文件系统，设置卷标为 System。
 
 create partition msr size=128
-创建大小为 128MB 的 MSR 分区。
+# 创建大小为 128MB 的 MSR 分区。
 
 create partition primary size=30000
-创建大小为 30GB 的主分区，此分区即为 Windows 分区。
+# 创建大小为 30GB 的主分区，此分区即为 Windows 分区。
 
 format quick fs=ntfs label=”Windows”
-格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
+# 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
 
 assign letter=”C”
-设置 Windows 分区盘符为 C:。
+# 设置 Windows 分区盘符为 C:。
 
 exit
-退出 DiskPart 命令操作界面。
+# 退出 DiskPart 命令操作界面。
 ```
 
 ### 推荐分区结构
@@ -182,58 +181,58 @@ exit
 
 ```powershell
 select disk 0
-选择要创建分区结构的硬盘为硬盘1，如果有多块硬盘可以使用 list disk 命令查看。
+# 选择要创建分区结构的硬盘为硬盘1，如果有多块硬盘可以使用 list disk 命令查看。
 
 clean
-清除硬盘所以数据及分区结构，请谨慎操作。
+# 清除硬盘所以数据及分区结构，请谨慎操作。
 
 convert gpt
-转换分区表为 GPT 格式。
+# 转换分区表为 GPT 格式。
 
 create partition primary size=300
-创建大小为 300MB 的主分区，此分区即为 WinRE 恢复分区。
+# 创建大小为 300MB 的主分区，此分区即为 WinRE 恢复分区。
 
 format quick fs=ntfs label=”WinRE”
-格式化 WinRE 恢复分区并使用 NTFS 文件系统，设置卷标为 WinRE。
+# 格式化 WinRE 恢复分区并使用 NTFS 文件系统，设置卷标为 WinRE。
 
 set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
-设置 WinRE 恢复分区为隐藏分区。
+# 设置 WinRE 恢复分区为隐藏分区。
 
 gpt attributes=0x8000000000000001
-设置 WinRE 恢复分区不能在磁盘管理器中被删除。
+# 设置 WinRE 恢复分区不能在磁盘管理器中被删除。
 
 create partition efi size=100
-创建大小为 100MB 的主分区，此分区即为 ESP 分区。
+# 创建大小为 100MB 的主分区，此分区即为 ESP 分区。
 
 format quick fs=fat32 label=”System”
-格式化 ESP 分区并使用 FAT32 文件系统，设置卷标为 System。
+# 格式化 ESP 分区并使用 FAT32 文件系统，设置卷标为 System。
 
 create partition msr size=128
-创建大小为 128MB 的 MSR 分区。
+# 创建大小为 128MB 的 MSR 分区。
 
 create partition primary size=30000
-创建大小为 30GB 的主分区，此分区即为 Windows 分区。
+# 创建大小为 30GB 的主分区，此分区即为 Windows 分区。
 
 format quick fs=ntfs label=”Windows”
-格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
+# 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
 
 assign letter=C
-设置 Windows 分区盘符为 C:。
+# 设置 Windows 分区盘符为 C:。
 
 create partition primary size=10000
-创建大小为 10GB 的主分区，此分区即为恢复分区。
+# 创建大小为 10GB 的主分区，此分区即为恢复分区。
 
 format quick fs=ntfs label=”Recovery”
-格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Recovery。
+# 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Recovery。
 
 set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
-设置恢复分区为隐藏分区。
+# 设置恢复分区为隐藏分区。
 
 gpt attributes=0x8000000000000001
-设置恢复分区不能在磁盘管理器中被删除。
+# 设置恢复分区不能在磁盘管理器中被删除。
 
 exit
-退出 DiskPart 命令操作界面。
+# 退出 DiskPart 命令操作界面。
 ```
 
 
@@ -252,28 +251,28 @@ exit
 
 ```powershell
 list disk
-显示连接到计算机的硬盘列表。
+# 显示连接到计算机的硬盘列表。
 
 select disk 2
-本节示例插入的是一个 8G 的U盘，所以选择磁盘1。
+# 本节示例插入的是一个 8G 的U盘，所以选择磁盘1。
 
 clean
-清除选中磁盘中的数据。
+# 清除选中磁盘中的数据。
 
 create partition primary
-在U盘上创建主分区。
+# 在U盘上创建主分区。
 
 active
-设置刚才创建的分区为活动分区。
+# 设置刚才创建的分区为活动分区。
 
 format quick fs=ntfs
-使用快速格式化方式格式化U盘并使用 NTFS 文件系统。
+# 使用快速格式化方式格式化U盘并使用 NTFS 文件系统。
 
 assign
-为U盘分配盘符。
+# 为U盘分配盘符。
 
 exit
-退出 DiskPart 命令行工具。
+# 退出 DiskPart 命令行工具。
 ```
 
 解压 Windows 10 操作系统安装 ISO 文件至任意目录或使用文件资源管理器挂载镜像文件至虚拟光驱。本节示例挂载镜像文件到 F 盘，U 盘盘符为 G，然后继续在命令提示符中执行如下命令复制操作系统安装文件至U盘：
@@ -315,16 +314,16 @@ Windows 10 操作系统中，使用磁盘管理工具即可完成硬盘配置转
 
 ```powershell
 diskpart
-运行 DiskPart 工具
+# 运行 DiskPart 工具
 
 list disk
-显示所有联机的硬盘，并记下要转为动态磁盘的硬盘磁盘号，这里以转换磁盘1为例。
+# 显示所有联机的硬盘，并记下要转为动态磁盘的硬盘磁盘号，这里以转换磁盘1为例。
 
 select disk 1
-选择磁盘1为操作对象。
+# 选择磁盘1为操作对象。
 
 convert dynamic
-对磁盘1进行转换操作，此步骤无任何提示，执行之前请认真核对磁盘信息是否正确。执行命令之后，等待程序执行完成提示，然后退出 DiskPart 命令环境即可。
+# 对磁盘1进行转换操作，此步骤无任何提示，执行之前请认真核对磁盘信息是否正确。执行命令之后，等待程序执行完成提示，然后退出 DiskPart 命令环境即可。
 ```
 
 **Tip：不能将安装有 Windows 10 操作系统的硬盘转换为动态磁盘，否则操作系统将无法启动。**
@@ -347,25 +346,25 @@ convert dynamic
 
 ```powershell
 diskpart
-运行 DiskPart 工具。
+# 运行 DiskPart 工具。
 
 list disk
-显示所有联机的硬盘，并记下要转为基本磁盘的硬盘磁盘号，这里以转换磁盘1为例。
+# 显示所有联机的硬盘，并记下要转为基本磁盘的硬盘磁盘号，这里以转换磁盘1为例。
 
 select disk 1
-选择磁盘1为操作对象。
+# 选择磁盘1为操作对象。
 
 detail disk
-显示该硬盘下所有卷的信息。
+# 显示该硬盘下所有卷的信息。
 
 select volume 0
-选中要删除的卷。
+# 选中要删除的卷。
 
 delete volume
-删除选中的卷，如果硬盘有多个卷，分别选中删除即可。
+# 删除选中的卷，如果硬盘有多个卷，分别选中删除即可。
 
 convert basic
-所有卷删除完毕之后，输入如上命令，等待程序提示完成，即可完成转换操作。
+# 所有卷删除完毕之后，输入如上命令，等待程序提示完成，即可完成转换操作。
 ```
 
 
@@ -376,22 +375,22 @@ convert basic
 
 ```powershell
 diskpart
-运行 DiskPart 工具。
+# 运行 DiskPart 工具。
 
 list disk
-显示连接到计算机的所有硬盘，然后记下要创建简单卷的硬盘的磁盘号。
+# 显示连接到计算机的所有硬盘，然后记下要创建简单卷的硬盘的磁盘号。
 
 create volume simple size=15000 disk=2
-创建简单卷。这里以在第三块硬盘上创建一个 15GB 大小的简单卷为例。如果不指定 size 参数即代表使用硬盘上所有未分配空间。
+# 创建简单卷。这里以在第三块硬盘上创建一个 15GB 大小的简单卷为例。如果不指定 size 参数即代表使用硬盘上所有未分配空间。
 
 assign letter=F
-指定盘符为 F。也可以使用 assign 命令自动分配盘符。
+# 指定盘符为 F。也可以使用 assign 命令自动分配盘符。
 
 exit
-退出 DiskPart 命令行工具
+# 退出 DiskPart 命令行工具
 
 format f: /fs:ntfs
-对刚创建的简单卷进行格式化操作，按照提示完成格式化操作之后即可使用该简单卷。
+# 对刚创建的简单卷进行格式化操作，按照提示完成格式化操作之后即可使用该简单卷。
 ```
 
 
@@ -402,29 +401,28 @@ format f: /fs:ntfs
 
 ```powershell
 diskpart
-运行 DiskPart 工具。
+# 运行 DiskPart 工具。
 
 list disk
-显示所有联机的硬盘，并记录要创建跨区卷的硬盘磁盘号，这里以把磁盘1的空间扩展到磁盘2上为例。
+# 显示所有联机的硬盘，并记录要创建跨区卷的硬盘磁盘号，这里以把磁盘1的空间扩展到磁盘2上为例。
 
 create volume simple size=5000 disk=1
-首先在磁盘1上创建大小为 5000MB 的简单卷。
+# 首先在磁盘1上创建大小为 5000MB 的简单卷。
 
 list volume
-显示要扩展到其他硬盘上的简单卷的卷号，这里卷号为5。
+# 显示要扩展到其他硬盘上的简单卷的卷号，这里卷号为5。
 
 select volume 5
-选择要扩展到其他硬盘上的简单卷。
+# 选择要扩展到其他硬盘上的简单卷。
 
 extend size=5000 disk=2
-将选择的卷扩展到磁盘2，并设定扩展大小为 5000MB。
+# 将选择的卷扩展到磁盘2，并设定扩展大小为 5000MB。
 
 format quick fs=ntfs
-对扩展后的跨区卷进行格式化，格式化方式为快速格式化，使用 NTFS 文件系统。
+# 对扩展后的跨区卷进行格式化，格式化方式为快速格式化，使用 NTFS 文件系统。
 
 assign
-自动分配盘符，同时也可以使用 assign latter=X 命令指定盘符。盘符创建完成之后跨
-区卷也创建成功
+# 自动分配盘符，同时也可以使用 assign latter=X 命令指定盘符。盘符创建完成之后跨区卷也创建成功
 ```
 
 
@@ -439,20 +437,19 @@ assign
 
 ```powershell
 diskpart
-运行 DiskPart 工具。
+# 运行 DiskPart 工具。
 
 list disk
-显示所有联机的硬盘，并记录要创建带区卷的硬盘磁盘号，这里以使用磁盘1和磁盘2创建带区卷为例。
+# 显示所有联机的硬盘，并记录要创建带区卷的硬盘磁盘号，这里以使用磁盘1和磁盘2创建带区卷为例。
 
 create volume stripe size=5000 disk=1,2
-创建大小为 5000MB 的带区卷。
+# 创建大小为 5000MB 的带区卷。
 
 format quick fs=ntfs
-对创建后的带区卷进行格式化，格式化方式为快速格式化，使用 NTFS 文件系统。
+# 对创建后的带区卷进行格式化，格式化方式为快速格式化，使用 NTFS 文件系统。
 
 assign
-自动分配盘符，同时也可以使用 assign latter=X 命令指定盘符。盘符创建完成之后带
-区卷也创建成功
+# 自动分配盘符，同时也可以使用 assign latter=X 命令指定盘符。盘符创建完成之后带区卷也创建成功
 ```
 
 
@@ -465,26 +462,25 @@ assign
 
 ```powershell
 diskpart
-运行 DiskPart 工具。
+# 运行 DiskPart 工具。
 
 list disk
-显示所有联机的硬盘，并记录要创建镜像卷的硬盘磁盘号，这里以使用磁盘1和磁盘2创建镜像卷为例。
+# 显示所有联机的硬盘，并记录要创建镜像卷的硬盘磁盘号，这里以使用磁盘1和磁盘2创建镜像卷为例。
 
 select disk 1
-选择磁盘1为操作对象。
+# 选择磁盘1为操作对象。
 
 create volume simple size=5000 disk=1
-在磁盘1上创建大小为 5000MB 的简单卷。
+# 在磁盘1上创建大小为 5000MB 的简单卷。
 
 add disk 2
-添加磁盘2到刚创建的简单卷，组成镜像卷。
+# 添加磁盘2到刚创建的简单卷，组成镜像卷。
 
 format quick fs=ntfs
-对创建后的带区卷进行格式化，格式化方式为快速格式化，使用 NTFS 文件系统。
+# 对创建后的带区卷进行格式化，格式化方式为快速格式化，使用 NTFS 文件系统。
 
 assign
-自动分配盘符，同时也可以使用 assign latter=X 命令指定盘符。盘符创建完成之后镜
-像卷也创建成功
+# 自动分配盘符，同时也可以使用 assign latter=X 命令指定盘符。盘符创建完成之后镜像卷也创建成功
 ```
 
 
@@ -847,26 +843,25 @@ Hyper-V 是通过模拟一个标准的（ISO/OSI 二层）交换机来支持以�
 
   ```powershell
   create vdisk fi le=D:\win10.vhdx maximum=3000 type=fi xed
-  创建 VHD 文件，VHD 容量为 3GB，使用固定类型。
+  # 创建 VHD 文件，VHD 容量为 3GB，使用固定类型。
   
   list vdisk
-  显示虚拟磁盘列表。
+  # 显示虚拟磁盘列表。
   
   select vdisk fi le=D:\win10.vhdx
-  选择创建的 VHD 文件。
+  # 选择创建的 VHD 文件。
   
   attach vdisk
-  附加 VHD。
+  # 附加 VHD。
   
   create partition primary
-  在 VHD 中创建主分区。
+  # 在 VHD 中创建主分区。
   
   assign letter=K
-  为创建的分区分配盘符为 K。
+  # 为创建的分区分配盘符为 K。
   
   format quick label=vhd fs=ntfs
-  设置分区使用 NTFS 文件系统、卷标为 vhd 并快速格式化分区。格式化完成之后操作
-  系统会自动打开创建的分区。
+  # 设置分区使用 NTFS 文件系统、卷标为 vhd 并快速格式化分区。格式化完成之后操作系统会自动打开创建的分区。
   ```
 
 #### 创建动态虚拟硬盘
@@ -885,7 +880,7 @@ create vdisk fi le=D:\Win10.vhdx maximum=3000 type=expandable
 
 ```powershell
 create vdisk fi le=D:\chafen.vhdx parent=D:\Win10.vhdx
-Win10.vhdx 是已经创建的父 VHD 文件，chafen.vhdx 为新创建的子 VHD 文件
+# Win10.vhdx 是已经创建的父 VHD 文件，chafen.vhdx 为新创建的子 VHD 文件
 ```
 
 **Tip：创建差分 VHD 时，要确保父 VHD 文件已分离。**
@@ -1143,49 +1138,49 @@ WIMBoot 是一种支持从特定 Windows 映像格式文件（WIM 文件）读�
 
    ```powershell
    select disk 0
-   选择要创建的分区结构的硬盘为硬盘1，如果有多块硬盘可以使用 list disk 命令查看。
+   # 选择要创建的分区结构的硬盘为硬盘1，如果有多块硬盘可以使用 list disk 命令查看。
    
    clean
-   清除硬盘所以数据及分区结构，请谨慎操作。
+   # 清除硬盘所以数据及分区结构，请谨慎操作。
    
    convert gpt
-   转换分区表为 GPT 格式。
+   # 转换分区表为 GPT 格式。
    
    create partition efi size=300
-   创建大小为 300MB 的主分区，此分区即为 ESP 分区。
+   # 创建大小为 300MB 的主分区，此分区即为 ESP 分区。
    
    format quick fs=fat32 label=”System”
-   格式化 ESP 分区并使用 FAT32 文件系统，设置卷标为 System。
+   # 格式化 ESP 分区并使用 FAT32 文件系统，设置卷标为 System。
    
    create partition msr size=128
-   创建大小为 128MB 的 MSR 分区。
+   # 创建大小为 128MB 的 MSR 分区。
    
    create partition primary size=30000
-   创建大小为 30GB 的主分区，此分区即为 Windows 分区。
+   # 创建大小为 30GB 的主分区，此分区即为 Windows 分区。
    
    format quick fs=ntfs label=”Windows”
-   格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
+   # 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
    
    assign letter=C
-   设置 Windows 分区盘符为 C:。
+   # 设置 Windows 分区盘符为 C:。
    
    create partition primary size=8000
-   创建大小为 8GB 的主分区，此分区即为恢复分区。
+   # 创建大小为 8GB 的主分区，此分区即为恢复分区。
    
    format quick fs=ntfs label=”Recovery”
-   格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Recovery。
+   # 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Recovery。
    
    assign letter=F
-   设置恢复分区盘符为 F:，由于恢复分区具备隐藏数据，所以操作系统重启之后，盘符自动失效。
+   # 设置恢复分区盘符为 F:，由于恢复分区具备隐藏数据，所以操作系统重启之后，盘符自动失效。
    
    set id=de94bba4-06d1-4d40-a16a-bfd50179d6ac
-   设置恢复分区为隐藏分区。
+   # 设置恢复分区为隐藏分区。
    
    gpt attributes=0x8000000000000001
-   设置恢复分区不能在磁盘管理器中被删除。
+   # 设置恢复分区不能在磁盘管理器中被删除。
    
    exit
-   退出 DiskPart 命令操作环境。
+   # 退出 DiskPart 命令操作环境。
    ```
 
 3. 分区创建完成之后，继续在命令提示符中执行如下命令，生成包含操作系统文件并能启动的 WIM 文件，这里假设将 Windows 10 操作系统安装镜像的 install.wim 文件复制存储与 D 盘（也可以直接使用原文件）。
@@ -1219,43 +1214,43 @@ WIMBoot 是一种支持从特定 Windows 映像格式文件（WIM 文件）读�
 
    ```powershell
    select disk 0
-   选择要创建的分区结构的硬盘为硬盘1，如果有多块硬盘可以使用 list disk 命令查看。
+   # 选择要创建的分区结构的硬盘为硬盘1，如果有多块硬盘可以使用 list disk 命令查看。
    
    clean
-   清除硬盘所以数据及分区结构，请谨慎操作。
+   # 清除硬盘所以数据及分区结构，请谨慎操作。
    
    create partition primary size=350
-   创建大小为 350MB 的主分区，此分区即为系统分区。
+   # 创建大小为 350MB 的主分区，此分区即为系统分区。
    
    format quick fs=ntfs label=”System”
-   格式化系统分区并使用 NTFS 文件系统，设置卷标为 System。
+   # 格式化系统分区并使用 NTFS 文件系统，设置卷标为 System。
    
    active
-   设置系统分区为“活动（active）”。
+   # 设置系统分区为“活动（active）”。
    
    create partition primary size=30000
-   创建大小为 30GB 的主分区，此分区即为 Windows 分区。
+   # 创建大小为 30GB 的主分区，此分区即为 Windows 分区。
    
    format quick fs=ntfs label=”Windows”
-   格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
+   # 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Windows。
    
    assign letter=C
-   设置 Windows 分区盘符为 C:。
+   # 设置 Windows 分区盘符为 C:。
    
    create partition primary size=8000
-   创建大小为 8GB 的主分区，此分区即为恢复分区。
+   # 创建大小为 8GB 的主分区，此分区即为恢复分区。
    
    format quick fs=ntfs label=”Recovery”
-   格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Recovery。
+   # 格式化 Windows 分区并使用 NTFS 文件系统，设置卷标为 Recovery。
    
    assign letter=F
-   设置恢复分区盘符为 F:，由于恢复分区具备隐藏数据，所以操作系统重启之后，盘符自动失效。
+   # 设置恢复分区盘符为 F:，由于恢复分区具备隐藏数据，所以操作系统重启之后，盘符自动失效。
    
    set id=27
-   设置恢复分区为隐藏分区。
+   # 设置恢复分区为隐藏分区。
    
    exit
-   退出 DiskPart 命令操作界面。
+   # 退出 DiskPart 命令操作界面。
    ```
 
 3. 分区创建完成之后，继续在命令提示符中执行如下命令，生成含有操作系统文件并能启动的 WIM 文件，这里假设将 Windows 10 操作系统安装镜像的 install.wim 文件复制存储与 D 盘（也可以直接使用原文件）。
@@ -1363,17 +1358,17 @@ Net User 命令适用于所有 Windows 10 操作系统版本的帐户启用、�
 
 ```powershell
 net user administrator /active:yes
-启用 Administrator 帐户。
+# 启用 Administrator 帐户。
 ```
 
 ```powershell
 net user administrator 1234567
-为 Administrator 帐户设置密码。其中 1234567 为设置的密码。
+# 为 Administrator 帐户设置密码。其中 1234567 为设置的密码。
 ```
 
 ```powershell
 net user administrator /active:no
-禁用 Administrator 帐户。
+# 禁用 Administrator 帐户。
 ```
 
 
@@ -1464,7 +1459,7 @@ copype amd64 e:\winpe_64
 
 ```powershell
 makewinpemedia /iso e:\winpe_64 e:\winpe_64.iso
-制作 WinPE 镜像文件。
+# 制作 WinPE 镜像文件。
 ```
 
 **Tip：使用 Windows ADK 制作的 WinPE 支持 UEFI 与 BIOS 固件启动。在 WinPE 环境下任何对 WinPE 系统做的修改或设置都将在重新启动计算机之后丢失。**

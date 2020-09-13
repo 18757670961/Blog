@@ -1,7 +1,6 @@
 ---
 title: Greedy Algorithm
 author: Desmond
-iframe: 'http://huangxuan.me/js-module-7day/'
 tags: Algorithm
 abbrlink: 9adfc48b
 date: 2020-07-26 22:32:03

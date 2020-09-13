@@ -1,7 +1,6 @@
 ---
 title: Depth-first Search
 author: Desmond
-iframe: 'http://huangxuan.me/js-module-7day/'
 catalog: true
 abbrlink: 7bb877cf
 date: 2020-07-26 23:02:01

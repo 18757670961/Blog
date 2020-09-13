@@ -1,7 +1,6 @@
 ---
 title: Breadth-first Search
 author: Desmond
-iframe: 'http://huangxuan.me/js-module-7day/'
 catalog: true
 tags: Algorithm
 abbrlink: '13300955'

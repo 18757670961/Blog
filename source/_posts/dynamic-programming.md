@@ -1,7 +1,6 @@
 ---
 title: Dynamic Programming
 author: Desmond
-iframe: 'http://huangxuan.me/js-module-7day/'
 catalog: true
 abbrlink: 71b19194
 date: 2020-07-26 22:48:29

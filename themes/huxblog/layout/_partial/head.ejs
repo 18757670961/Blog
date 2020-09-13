@@ -14,8 +14,8 @@
     <% } %>
   </title>
 
-  <link rel="canonical" href="<%= config.url + config.root + (page.path||'').replace('index.html', '') %>">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="preload" href="<%= config.url + config.root + (page.path||'').replace('index.html', '') %>" as="style" onload="this.rel='canonical'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.rel='stylesheet'">
 
   <!-- Bootstrap Core CSS -->
   <%- css('css/bootstrap.min.css') %>
@@ -29,8 +29,9 @@
   <!-- Custom Fonts -->
   <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
   <!-- Hux change font-awesome CDN to qiniu -->
-  <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="preload" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'" >
 
+  <!-- <link rel="preload" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css" as="style" onload="this.rel='stylesheet'"> -->
 
   <!-- Hux Delete, sad but pending in China
     <link href='http://fonts.lug.ustc.edu.cn/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
