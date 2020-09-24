@@ -420,6 +420,10 @@ journalctl | grep filename.php | grep -v error
 
 pressing the **Tab** key tells Bash to display its best guess on the command line
 
+![](e8006866/10.jpg)
+
+![](e8006866/11.png)
+
 
 
 

@@ -3,8 +3,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <br />
-
                 <ul class="list-inline text-center">
                     <% if (config.RSS) { %>
                     <li>
@@ -24,7 +22,7 @@
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i
-                                    class="fa fa-twitter fa-stack-1x fa-inverse"
+                                    class="fab fa-twitter fa-stack-1x fa-inverse"
                                 ></i>
                             </span>
                         </a>
@@ -64,7 +62,7 @@
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i
-                                    class="fa fa-facebook fa-stack-1x fa-inverse"
+                                    class="fab fa-facebook fa-stack-1x fa-inverse"
                                 ></i>
                             </span>
                         </a>
@@ -78,7 +76,7 @@
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i
-                                    class="fa fa-github fa-stack-1x fa-inverse"
+                                    class="fab fa-github fa-stack-1x fa-inverse"
                                 ></i>
                             </span>
                         </a>
@@ -92,7 +90,7 @@
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i
-                                    class="fa fa-linkedin fa-stack-1x fa-inverse"
+                                    class="fab fa-linkedin fa-stack-1x fa-inverse"
                                 ></i>
                             </span>
                         </a>
@@ -168,6 +166,72 @@
         }
         s.parentNode.insertBefore(o, s);
     }
+</script>
+
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body = document.body;
+    var $toggle = document.querySelector(".navbar-toggle");
+    var $navbar = document.querySelector("#huxblog_navbar");
+    var $collapse = document.querySelector(".navbar-collapse");
+
+    var __HuxNav__ = {
+        close: function () {
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function () {
+                // prevent frequently toggle
+                if ($navbar.className.indexOf("in") < 0) {
+                    $collapse.style.height = "0px";
+                }
+            }, 400);
+        },
+        open: function () {
+            $collapse.style.height = "auto";
+            $navbar.className += " in";
+        },
+    };
+
+    // Bind Event
+    $toggle.addEventListener("click", function (e) {
+        if ($navbar.className.indexOf("in") > 0) {
+            __HuxNav__.close();
+        } else {
+            __HuxNav__.open();
+        }
+    });
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from
+     * $toggle/$collapse will break global delegation.
+     *
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener("click", function (e) {
+        if (e.target == $toggle) return;
+        if (e.target.className == "icon-bar") return;
+        __HuxNav__.close();
+    });
+</script>
+
+<!-- fontawesome svg -->
+<script defer src="/js/all.min.js"></script>
+
+<!-- dark mode -->
+<script>
+    const html = document.getElementsByTagName("html")[0];
+    const toggleTheme = () => {
+        if (html.getAttribute("theme") == "light")
+            html.setAttribute("theme", "dark");
+        else html.setAttribute("theme", "light");
+    };
 </script>
 
 <!-- Fancybox -->
