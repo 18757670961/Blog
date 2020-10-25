@@ -6,10 +6,9 @@
 
 <!-- hack iOS CSS :active style -->
 
-<body ontouchstart="" class="fancybox-active">
+<body ontouchstart="">
 
     <%- partial('_partial/nav') %>
-    <%- partial('_partial/search') %>
 
     <!-- Main Content -->
     <%- body %>
@@ -17,10 +16,7 @@
     <!-- Footer -->
     <%- partial('_partial/footer') %>
 
-
-    <!-- Image to hack wechat -->
-    <img src="<%= config['url'] %><%= config['root'] %>img/icon_wechat.png" width="0" height="0" />
-    <!-- Migrate from head to bottom, no longer block render and still work -->
+    <a id="rocket" href="#top" class=""></a>
 </body>
 
 </html>

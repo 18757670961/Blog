@@ -35,7 +35,8 @@ layout: layout
 
             <% site.tags.map(function(tag){  %>
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="<%= tag.name %>">
+                <span class="listing-seperator" id="<%= tag.name %>">
+                    <i class="fas fa-tag"></i>
                     <span class="tag-text"><%= tag.name %></span>
                 </span>
                 <% tag.posts.map(function(post){  %>

@@ -43,17 +43,17 @@ $(document).ready(function () {
 
 // Navigation Scripts to Show Header on Scroll-Up
 jQuery(document).ready(function ($) {
-    var MQL = 1170;
+    let MQL = 1170;
 
     //primary navigation slide-in effect
     if ($(window).width() > MQL) {
-        var headerHeight = $('.navbar-custom').height(),
+        let headerHeight = $('.navbar-custom').height(),
             bannerHeight = $('.intro-header .container').height();
         $(window).on('scroll', {
                 previousTop: 0
             },
             function () {
-                var currentTop = $(window).scrollTop(),
+                let currentTop = $(window).scrollTop(),
                     $catalog = $('.side-catalog');
 
                 //check if user is scrolling up by mouse or keyborad

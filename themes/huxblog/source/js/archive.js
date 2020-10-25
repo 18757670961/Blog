@@ -6,11 +6,11 @@ https://github.com/kitian616/jekyll-TeXt-theme
   function queryString() {
     // This function is anonymous, is executed immediately and
     // the return value is assigned to QueryString!
-    var i = 0,
+    let i = 0,
       queryObj = {},
       pair;
-    var queryStr = window.location.search.substring(1);
-    var queryArr = queryStr.split('&');
+    let queryStr = window.location.search.substring(1);
+    let queryArr = queryStr.split('&');
     for (i = 0; i < queryArr.length; i++) {
       pair = queryArr[i].split('=');
       // If first entry with this name
@@ -27,8 +27,8 @@ https://github.com/kitian616/jekyll-TeXt-theme
     return queryObj;
   }
 
-  var setUrlQuery = (function () {
-    var baseUrl = window.location.href.split('?')[0];
+  let setUrlQuery = (function () {
+    let baseUrl = window.location.href.split('?')[0];
     return function (query) {
       if (typeof query === 'string') {
         window.history.replaceState(null, '', baseUrl + query);
@@ -39,22 +39,22 @@ https://github.com/kitian616/jekyll-TeXt-theme
   })();
 
   $(document).ready(function () {
-    var $tags = $('.js-tags');
-    var $articleTags = $tags.find('.tag-button');
-    var $tagShowAll = $tags.find('.tag-button--all');
-    var $result = $('.js-result');
-    var $sections = $result.find('section');
-    var sectionArticles = []
-    var $lastFocusButton = null;
-    var sectionTopArticleIndex = [];
-    var hasInit = false;
+    let $tags = $('.js-tags');
+    let $articleTags = $tags.find('.tag-button');
+    let $tagShowAll = $tags.find('.tag-button--all');
+    let $result = $('.js-result');
+    let $sections = $result.find('section');
+    let sectionArticles = []
+    let $lastFocusButton = null;
+    let sectionTopArticleIndex = [];
+    let hasInit = false;
 
     $sections.each(function () {
       sectionArticles.push($(this).find('.item'));
     });
 
     function init() {
-      var i, index = 0;
+      let i, index = 0;
       for (i = 0; i < $sections.length; i++) {
         sectionTopArticleIndex.push(index);
         index += $sections.eq(i).find('.item').length;
@@ -66,7 +66,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
       if (!_tag) {
         return $tagShowAll;
       }
-      var _buttons = $articleTags.filter('[data-encode="' + _tag + '"]');
+      let _buttons = $articleTags.filter('[data-encode="' + _tag + '"]');
       if (_buttons.length === 0) {
         return $tagShowAll;
       }
@@ -82,9 +82,9 @@ https://github.com/kitian616/jekyll-TeXt-theme
     }
 
     function tagSelect(tag /*raw tag*/ , target) {
-      var result = {},
+      let result = {},
         $articles;
-      var i, j, k, _tag;
+      let i, j, k, _tag;
 
       for (i = 0; i < sectionArticles.length; i++) {
         $articles = sectionArticles[i];
@@ -93,7 +93,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
             result[i] || (result[i] = {});
             result[i][j] = true;
           } else {
-            var tags = $articles.eq(j).data('tags').split(',');
+            let tags = $articles.eq(j).data('tags').split(',');
             for (k = 0; k < tags.length; k++) {
               if (tags[k] === tag) {
                 result[i] || (result[i] = {});
@@ -133,7 +133,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
       }
     }
 
-    var query = queryString(),
+    let query = queryString(),
       _tag = query.tag;
 
     init();

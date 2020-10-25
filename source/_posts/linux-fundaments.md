@@ -16,6 +16,13 @@ top:
 
 
 
+## Online References
+
+- [Bootlin](https://elixir.bootlin.com/) - source code
+- [Linux Tools](https://linuxtools-rst.readthedocs.io/)
+
+
+
 ## The UNIX/Linux Philosophy
 
 - **Keep programs small**：write a program to do one well-defined task; do it efficiently, do it well

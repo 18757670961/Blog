@@ -21,7 +21,7 @@
 (function ($, window, document, undefined) {
 
 	// our plugin constructor
-	var OnePageNav = function (elem, options) {
+	let OnePageNav = function (elem, options) {
 		this.elem = elem;
 		this.$elem = $(elem);
 		this.options = options;
@@ -82,8 +82,8 @@
 		},
 
 		bindInterval: function () {
-			var self = this;
-			var docHeight;
+			let self = this;
+			let docHeight;
 
 			self.$win.on('scroll.onePageNav', function () {
 				self.didScroll = true;
@@ -111,10 +111,10 @@
 		},
 
 		getPositions: function () {
-			var self = this;
-			var linkHref;
-			var topPos;
-			var $target;
+			let self = this;
+			let linkHref;
+			let topPos;
+			let $target;
 
 			self.$nav.each(function () {
 				linkHref = self.getHash($(this));
@@ -128,10 +128,10 @@
 		},
 
 		getSection: function (windowPos) {
-			var returnValue = null;
-			var windowHeight = Math.round(this.$win.height() * this.config.scrollThreshold);
+			let returnValue = null;
+			let windowHeight = Math.round(this.$win.height() * this.config.scrollThreshold);
 
-			for (var section in this.sections) {
+			for (let section in this.sections) {
 				if ((this.sections[section] - windowHeight) < windowPos) {
 					returnValue = section;
 				}
@@ -141,10 +141,10 @@
 		},
 
 		handleClick: function (e) {
-			var self = this;
-			var $link = $(e.currentTarget);
-			var $parent = $link.parent();
-			var newLoc = '#' + self.getHash($link);
+			let self = this;
+			let $link = $(e.currentTarget);
+			let $parent = $link.parent();
+			let newLoc = '#' + self.getHash($link);
 
 			if (!$parent.hasClass(self.config.currentClass)) {
 				//Start callback
@@ -179,9 +179,9 @@
 		},
 
 		scrollChange: function () {
-			var windowTop = this.$win.scrollTop();
-			var position = this.getSection(windowTop);
-			var $parent;
+			let windowTop = this.$win.scrollTop();
+			let position = this.getSection(windowTop);
+			let $parent;
 
 			//If the position is set
 			if (position !== null) {
@@ -201,7 +201,7 @@
 		},
 
 		scrollTo: function (target, callback) {
-			var offset = $(target).offset().top - this.config.padding;
+			let offset = $(target).offset().top - this.config.padding;
 
 			$('html, body').animate({
 				scrollTop: offset

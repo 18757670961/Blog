@@ -24,9 +24,9 @@ layout: layout
             <!-- 归档列表 -->
 
             <% 
-                var years = {};
+                let years = {};
                 site.posts.sort('date').reverse().forEach(function(post){
-                    var year = post.date.year()
+                    let year = post.date.year()
                     if(years[year]===undefined){
                         years[year] = [];
                     }
@@ -39,7 +39,8 @@ layout: layout
 
             <% Object.keys(years).reverse().forEach(function(year){  %>
             <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="<%= year %>">
+                <span class="listing-seperator" id="<%= year %>">
+                    <i class="far fa-calendar-times"></i>
                     <span class="tag-text"><%= year %></span>
                 </span>
                 <ul>

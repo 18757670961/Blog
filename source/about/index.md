@@ -17,11 +17,11 @@ comments: true
 - UNNCer (CS)
 - 菜鸟程序猿 (项目经验0)
 - 平面设计/插画 爱好者 (PS一套走天下)
-- 吉他爱好者 (好想学即兴)
+- 吉他爱好者
 - 各类原声爱好者
 - ACG 爱好者 (二次元及以上不搞)
 - HIFI 爱好者
-- 数码产品爱好者 (怀念Lumia)
+- 数码产品爱好者 
 - 轻度完美主义者
 - BPD 潜在患者
 - 最讨厌自己的人
@@ -44,28 +44,27 @@ comments: true
 ### Current learning
 
 - OOP (Java, C++)
-- Linux
+- Linux (operating system principles)
 - Git and Github
-- Web development
+- Web development (Vue.js, Node.js, responsiveness ...)
 - Data structure and Algorithm
-- Guitar
+- Acoustic guitar
 - Graphic design
 - IELTS
-- 考驾照
 
 
 
 ### Current reading
 
 - 《丑陋的中国人》
-- 《坂本龙一自传》
+- 《通向财务自由之路》
 - 《守望者前传》
 
 
 
 ### In-progress work
 
-- Summer placement
+- Software engineering group project
 
 
 
