@@ -9,26 +9,17 @@ layout: page
 
 <br>
 <hr>
+<br>
 <div class="alert alert-info" role="alert">
     Leave your lovely comment below ^_^
 </div>
 
-<!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC81MDg5NC8yNzM3Ng==">
-    <script type="text/javascript">
-        (function (d, s) {
-            let j, e = d.getElementsByTagName(s)[0];
-
-            if (typeof LivereTower === 'function') {
-                return;
-            }
-
-            j = d.createElement(s);
-            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-            j.async = true;
-
-            e.parentNode.insertBefore(j, e);
-        })(document, 'script');
-    </script>
-    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
+<!-- valine -->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el:'#vcomments',
+        appId: 'ld71aOoHttYMrEYndC0DMJQC-gzGzoHsz',
+        appKey: '2odP1opK8R97ry76E2OHjR9N',
+    })
+</script>

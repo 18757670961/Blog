@@ -147,9 +147,6 @@
 <!-- insight search -->
 <%- js('js/insight') %>
 
-<!-- rocket -->
-<script type="text/javascript" src="/js/totop.js" async=""></script>
-
 <!-- async load function -->
 <script>
     function async(u, c) {
@@ -169,6 +166,19 @@
         }
         s.parentNode.insertBefore(o, s);
     }
+</script>
+
+<!-- rocket -->
+<script type="text/javascript" src="/js/totop.js"></script>
+
+<!-- valine -->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el:'#vcomments',
+        appId: 'ld71aOoHttYMrEYndC0DMJQC-gzGzoHsz',
+        appKey: '2odP1opK8R97ry76E2OHjR9N',
+    })
 </script>
 
 <script>

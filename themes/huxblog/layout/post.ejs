@@ -82,15 +82,14 @@ layout: layout
                     <% } %>
                 </ul>
 
-                <hr>
+                <hr><br>
 
                 <div class="alert alert-info" role="alert">
                     Leave your lovely comment below ^_^
                 </div>
 
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC81MDg5NC8yNzM3Ng==">
-                </div>
+                <!-- valine -->
+                <div id="vcomments"></div>
 
             </div>
 
@@ -149,21 +148,14 @@ layout: layout
     </div>
 </article>
 
-<!-- 来必力City版安装代码 -->
-<script type="text/javascript">
-    (function (d, s) {
-        let j, e = d.getElementsByTagName(s)[0];
-
-        if (typeof LivereTower === 'function') {
-            return;
-        }
-
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-
-        e.parentNode.insertBefore(j, e);
-    })(document, 'script');
+<!-- valine -->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el:'#vcomments',
+        appId: 'ld71aOoHttYMrEYndC0DMJQC-gzGzoHsz',
+        appKey: '2odP1opK8R97ry76E2OHjR9N',
+    })
 </script>
 
 <% if(config['anchorjs']) { %>
