@@ -281,17 +281,6 @@
     }
 </script>
 
-<!--fastClick.js -->
-<script>
-    async(
-        "https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js",
-        function () {
-            let $nav = document.querySelector("nav");
-            if ($nav) FastClick.attach($nav);
-        }
-    );
-</script>
-
 <!-- Side Catalog -->
 <% if (page.catalog) { %>
 <script type="text/javascript">

@@ -67,3 +67,15 @@ search:
     swiftype: # enter swiftype install key here
     baidu: false # you need to disable other search engines to use Baidu search, options: true, false
 
+math:
+  katex:
+    css: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css'
+    options:
+      throwOnError: false
+  mathjax:
+    css: 'https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css'
+    options:
+      conversion:
+        display: false
+      tex:
+      svg:
