@@ -84,6 +84,7 @@ layout: layout
 
                 <!-- valine -->
                 <div id="vcomments"></div>
+                <br><br>
 
             </div>
 
@@ -122,16 +123,6 @@ layout: layout
     </div>
 </article>
 
-<!-- valine -->
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-    new Valine({
-        el:'#vcomments',
-        appId: 'ld71aOoHttYMrEYndC0DMJQC-gzGzoHsz',
-        appKey: '2odP1opK8R97ry76E2OHjR9N',
-    })
-</script>
-
 <!-- resize header to fullscreen keynotes -->
 <script>
     let $header = document.getElementsByTagName("header")[0];
@@ -157,22 +148,6 @@ layout: layout
 </script>
 
 <% if(config['anchorjs']) { %>
-<!-- async load function -->
-<script>
-    function async (u, c) {
-        let d = document,
-            t = 'script',
-            o = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        o.src = u;
-        if (c) {
-            o.addEventListener('load', function (e) {
-                c(null, e);
-            }, false);
-        }
-        s.parentNode.insertBefore(o, s);
-    }
-</script>
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
     async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {

@@ -130,3 +130,6 @@ deploy:
   # type: git
   # repository: https://gitee.com/shu_guang_lu/shu_guang_lu
   # branch: master
+
+server: 
+  port: 5000

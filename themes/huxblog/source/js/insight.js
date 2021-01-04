@@ -3,23 +3,23 @@
  * @author PPOffice { @link https://github.com/ppoffice }
  */
 (function ($, CONFIG) {
-    var $main = $('.ins-search');
+    var $main = jq('.ins-search');
     var $input = $main.find('.ins-search-input');
     var $wrapper = $main.find('.ins-section-wrapper');
     var $container = $main.find('.ins-section-container');
     $main.parent().remove('.ins-search');
-    $('body').append($main);
+    jq('body').append($main);
 
     function section (title) {
-        return $('<section>').addClass('ins-section')
-            .append($('<header>').addClass('ins-section-header').text(title));
+        return jq('<section>').addClass('ins-section')
+            .append(jq('<header>').addClass('ins-section-header').text(title));
     }
 
     function searchItem (icon, title, slug, preview, url) {
-        return $('<div>').addClass('ins-selectable').addClass('ins-search-item')
-            .append($('<header>').append($('<i>').addClass('fa').addClass('fa-' + icon)).append("&nbsp;&nbsp;").append(title != null && title != '' ? title : CONFIG.TRANSLATION['UNTITLED'])
-                .append(slug ? $('<span>').addClass('ins-slug').text(slug) : null))
-            .append(preview ? $('<p>').addClass('ins-search-preview').text(preview) : null)
+        return jq('<div>').addClass('ins-selectable').addClass('ins-search-item')
+            .append(jq('<header>').append(jq('<i>').addClass('fa').addClass('fa-' + icon)).append("&nbsp;&nbsp;").append(title != null && title != '' ? title : CONFIG.TRANSLATION['UNTITLED'])
+                .append(slug ? jq('<span>').addClass('ins-slug').text(slug) : null))
+            .append(preview ? jq('<p>').addClass('ins-search-preview').text(preview) : null)
             .attr('data-url', url);
     }
 
@@ -187,15 +187,15 @@
         var $items = $.makeArray($container.find('.ins-selectable'));
         var prevPosition = -1;
         $items.forEach(function (item, index) {
-            if ($(item).hasClass('active')) {
+            if (jq(item).hasClass('active')) {
                 prevPosition = index;
                 return;
             }
         });
         var nextPosition = ($items.length + prevPosition + value) % $items.length;
-        $($items[prevPosition]).removeClass('active');
-        $($items[nextPosition]).addClass('active');
-        scrollTo($($items[nextPosition]));
+        jq($items[prevPosition]).removeClass('active');
+        jq($items[nextPosition]).addClass('active');
+        scrollTo(jq($items[nextPosition]));
     }
 
     function gotoLink ($item) {
@@ -209,21 +209,21 @@
             $main.addClass('show');
         }
         $input.on('input', function () {
-            var keywords = $(this).val();
+            var keywords = jq(this).val();
             searchResultToDOM(search(json, keywords));
         });
         $input.trigger('input');
     });
 
 
-    $(document).on('click focus', '.search-field', function () {
+    jq(document).on('click focus', '.search-field', function () {
         $main.addClass('show');
         $main.find('.ins-search-input').focus();
     }).on('click focus', '.search-form-submit', function () {
         $main.addClass('show');
         $main.find('.ins-search-input').focus();
     }).on('click', '.ins-search-item', function () {
-        gotoLink($(this));
+        gotoLink(jq(this));
     }).on('click', '.ins-close', function () {
         $main.removeClass('show');
     }).on('keydown', function (e) {

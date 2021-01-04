@@ -10,8 +10,6 @@ categories:
 top:
 ---
 
-
-
 # Online Tutorials & References
 
 ## HTML & CSS
@@ -32,7 +30,9 @@ top:
 - [SurviveJS](https://survivejs.com/)
 
 - [MDN web docs](https://developer.mozilla.org/)
+
 - [Kirupa](https://www.kirupa.com/)
+
 - [Smashing Magazine](https://www.smashingmagazine.com/)
 
 ## Web Design
@@ -40,8 +40,6 @@ top:
 - [Resilient Web Design](https://resilientwebdesign.com/)
 
 ------
-
-
 
 # Fundaments
 
@@ -137,9 +135,9 @@ e.g.
 - **General**: for general information, such as the date
 
 - **Request**: included in request headers
-
+  
   e.g. 
-
+  
   - *Accept: text/plain* (specifies a preference pf the browser for the MIME type of the requested document)
   - *Host: host name*
   - *If-Modified-Since: date* (specified that the requested file should be sent only if it has been modified since the given date)
@@ -151,9 +149,9 @@ e.g.
 ### Response Phase
 
 - Status line (e.g. *HTTP/1.1 200 OK*)
-
+  
   First digits of HTTP status codes:
-
+  
   | First Digit | Category      |
   | ----------- | ------------- |
   | 1           | Informational |
@@ -163,7 +161,9 @@ e.g.
   | 5           | Server error  |
 
 - Response header fields
+
 - Blank line
+
 - Response body (.html)
 
 **A complete response header**
@@ -179,4 +179,3 @@ Content-length: 364
 Connection: close
 Content-type: text/html, charset=UTF-8
 ```
-

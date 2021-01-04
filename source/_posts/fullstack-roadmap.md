@@ -31,3 +31,9 @@ top:
 ## DevOps
 
 ![](d0f0888e/3.jpg)
+
+
+
+## Other versions
+
+![](d0f0888e/4.jpg)

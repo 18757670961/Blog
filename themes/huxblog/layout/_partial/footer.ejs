@@ -138,16 +138,36 @@
 <!-- jQuery -->
 <%- js('js/jquery.min.js') %>
 
+<script>
+    var jq = jQuery.noConflict(); // $ replaced by jq
+</script>
+
 <!-- Bootstrap Core JavaScript -->
 <%- js('js/bootstrap.min.js') %>
 
 <!-- Custom Theme JavaScript -->
 <%- js('js/hux-blog.min.js') %>
 
+<!-- rocket -->
+<script type="text/javascript" src="/js/totop.js"></script>
+
+<%- js('js/script') %>
+
 <!-- insight search -->
 <%- js('js/insight') %>
 
-<!-- async load function -->
+<!-- scroll effect -->
+<script>
+    jq("a").click(function () {
+        jq("html, body").animate(
+            { scrollTop: jq(jq(this).attr("href")).offset().top - 20 + "px" },
+            500
+        );
+        return false; //不要这句会有点卡顿
+    });
+</script>
+
+<!-- async load function
 <script>
     function async(u, c) {
         let d = document,
@@ -166,20 +186,7 @@
         }
         s.parentNode.insertBefore(o, s);
     }
-</script>
-
-<!-- rocket -->
-<script type="text/javascript" src="/js/totop.js"></script>
-
-<!-- valine -->
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-    new Valine({
-        el:'#vcomments',
-        appId: 'ld71aOoHttYMrEYndC0DMJQC-gzGzoHsz',
-        appKey: '2odP1opK8R97ry76E2OHjR9N',
-    })
-</script>
+</script> -->
 
 <script>
     // Drop Bootstarp low-performance Navbar
@@ -237,6 +244,27 @@
 <!-- fontawesome svg -->
 <script defer src="/js/all.min.js"></script>
 
+<!-- valine -->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: "#vcomments",
+        appId: "a5dLFH0h0XeGMclrVwe9mOGm-9Nh9j0Va",
+        appKey: "gU28YiCbIfhgXEAOS5T7uJ9A",
+    });
+</script>
+
+<!-- safari optimization -->
+<!-- <script>
+    document.body.addEventListener(
+        "touchmove",
+        function (e) {
+            e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+        },
+        { passive: false }
+    ); //passive 参数不能省略，用来兼容ios和android
+</script> -->
+
 <!-- dark mode -->
 <script>
     const html = document.getElementsByTagName("html")[0];
@@ -274,7 +302,7 @@
 <!-- jquery.tagcloud.js -->
 <script>
     // only load tagcloud.js in tag.html
-    if ($("#tag_cloud").length !== 0) {
+    if (jq("#tag_cloud").length !== 0) {
         async(
             "<%= config.url%><%= config.root%>js/jquery.tagcloud.js",
             function () {
@@ -285,7 +313,7 @@
                         end: "#0085a1",
                     },
                 };
-                $("#tag_cloud a").tagcloud();
+                jq("#tag_cloud a").tagcloud();
             }
         );
     }
@@ -295,7 +323,7 @@
 <% if (page.catalog) { %>
 <script type="text/javascript">
     function generateCatalog(selector) {
-        let P = $("div.post-container"),
+        let P = jq("div.post-container"),
             a,
             n,
             t,
@@ -304,12 +332,12 @@
             c;
         a = P.find("h1,h2,h3,h4,h5,h6");
         a.each(function () {
-            n = $(this).prop("tagName").toLowerCase();
-            i = "#" + $(this).prop("id");
-            t = $(this).text();
-            c = $('<a href="' + i + '" rel="nofollow">' + t + "</a>");
-            l = $('<li class="' + n + '_nav"></li>').append(c);
-            $(selector).append(l);
+            n = jq(this).prop("tagName").toLowerCase();
+            i = "#" + jq(this).prop("id");
+            t = jq(this).text();
+            c = jq('<a href="' + i + '" rel="nofollow">' + t + "</a>");
+            l = jq('<li class="' + n + '_nav"></li>').append(c);
+            jq(selector).append(l);
         });
         return true;
     }
@@ -317,9 +345,9 @@
     generateCatalog(".catalog-body");
 
     // toggle side catalog
-    $(".catalog-toggle").click(function (e) {
+    jq(".catalog-toggle").click(function (e) {
         e.preventDefault();
-        $(".side-catalog").toggleClass("fold");
+        jq(".side-catalog").toggleClass("fold");
     });
 
     /*
@@ -327,7 +355,7 @@
      * Fork by Hux to support padding
      */
     async("<%= config.root%>js/jquery.nav.js", function () {
-        $(".catalog-body").onePageNav({
+        jq(".catalog-body").onePageNav({
             currentClass: "active",
             changeHash: !1,
             easing: "swing",
@@ -343,14 +371,3 @@
     });
 </script>
 <% } %>
-
-<!-- scroll effect -->
-<script>
-    $("a").click(function () {
-        $("html, body").animate(
-            { scrollTop: $($(this).attr("href")).offset().top - 20 + "px" },
-            500
-        );
-        return false; //不要这句会有点卡顿
-    });
-</script>

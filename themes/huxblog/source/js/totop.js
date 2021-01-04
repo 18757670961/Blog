@@ -1,13 +1,13 @@
-$(window).scroll(function() {
-    $(window).scrollTop() > $(window).height()*0.5 ? $("#rocket").addClass("show") : $("#rocket").removeClass("show");
+jq(window).scroll(function() {
+    jq(window).scrollTop() > jq(window).height()*0.5 ? jq("#rocket").addClass("show") : jq("#rocket").removeClass("show");
 });
 
-$("#rocket").click(function() {
-    $("#rocket").addClass("launch");
-    $("html, body").animate({
+jq("#rocket").click(function() {
+    jq("#rocket").addClass("launch");
+    jq("html, body").animate({
         scrollTop: 0
     }, 1000, function() {
-        $("#rocket").removeClass("show launch");
+        jq("#rocket").removeClass("show launch");
     });
     return false;
 });
