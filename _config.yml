@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://shuguang.tech
+url: https://desmond-lsg.tech
 root: /
 # url: https://shu_guang_lu.gitee.io
 # root: /
