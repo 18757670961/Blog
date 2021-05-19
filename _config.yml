@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Desmond的学习笔记
+title: Desmond的避难所
 subtitle: bury the past, sow the future
 keywords:
 author: Shuguang LYU
@@ -57,8 +57,8 @@ future: true
 # Custom Setting Start #############################################################
 
 # Site settings
-# SEOTitle: Desmond的避难所 | Desmond's Blog
-SEOTitle: Desmond的学习笔记
+SEOTitle: Desmond的避难所 | Desmond's Blog
+# SEOTitle: Desmond的学习笔记
 header-img: img/home-bg.jpg
 email: l840376507@outlook.com
 description: "bury the past, sow the future"
