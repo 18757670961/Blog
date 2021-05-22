@@ -11,11 +11,16 @@
     "deploy": "cloudbase framework deploy"
   },
   "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-back-to-top": "^1.6.0",
+    "@vuepress-reco/vuepress-plugin-comments": "^1.6.0",
+    "@vuepress-reco/vuepress-plugin-loading-page": "^1.6.0",
+    "@vuepress-reco/vuepress-plugin-pagation": "^1.6.0",
+    "@vuepress-reco/vuepress-plugin-screenfull": "^1.0.1",
     "@vuepress/plugin-active-header-links": "^1.8.2",
-    "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-blog": "^1.9.4",
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "@vuepress/plugin-nprogress": "^1.8.2",
+    "@vuepress/plugin-search": "^1.8.2",
     "vuepress": "^1.8.2",
     "vuepress-plugin-copyright": "^1.0.2",
     "vuepress-plugin-smooth-scroll": "^0.0.10"

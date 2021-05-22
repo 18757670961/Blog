@@ -1274,8 +1274,15 @@
 
 "@vuepress-reco/vuepress-plugin-pagation@^1.6.0":
   "integrity" "sha1-xjKq4WOP+cZ/5Yw5q2FxMr6e7ss="
-  "resolved" "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-pagation/download/@vuepress-reco/vuepress-plugin-pagation-1.6.0.tgz"
+  "resolved" "https://registry.nlark.com/@vuepress-reco/vuepress-plugin-pagation/download/@vuepress-reco/vuepress-plugin-pagation-1.6.0.tgz"
   "version" "1.6.0"
+
+"@vuepress-reco/vuepress-plugin-screenfull@^1.0.1":
+  "integrity" "sha1-c5JMhn8fVSyernRHhLbVOQF55Q8="
+  "resolved" "https://registry.nlark.com/@vuepress-reco/vuepress-plugin-screenfull/download/@vuepress-reco/vuepress-plugin-screenfull-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "screenfull" "4.2.1"
 
 "@vuepress/core@1.8.2":
   "integrity" "sha1-T1uvyJRpG/6kFGKUpYKhKUg9ryo="
@@ -1350,13 +1357,6 @@
   dependencies:
     "lodash.debounce" "^4.0.8"
 
-"@vuepress/plugin-back-to-top@^1.8.2":
-  "integrity" "sha1-6XlECdHVieSVKwcAKRJw0mlubQE="
-  "resolved" "https://registry.nlark.com/@vuepress/plugin-back-to-top/download/@vuepress/plugin-back-to-top-1.8.2.tgz"
-  "version" "1.8.2"
-  dependencies:
-    "lodash.debounce" "^4.0.8"
-
 "@vuepress/plugin-blog@^1.9.4":
   "integrity" "sha1-NGNtA4fSgiHJ8lZLYlV4baDdGGo="
   "resolved" "https://registry.npm.taobao.org/@vuepress/plugin-blog/download/@vuepress/plugin-blog-1.9.4.tgz"
@@ -1420,7 +1420,7 @@
   dependencies:
     "@vuepress/shared-utils" "1.8.2"
 
-"@vuepress/plugin-search@1.8.2":
+"@vuepress/plugin-search@^1.8.2", "@vuepress/plugin-search@1.8.2":
   "integrity" "sha1-dLkvZjrPa0Vg4V3ARCqExOh04gY="
   "resolved" "https://registry.nlark.com/@vuepress/plugin-search/download/@vuepress/plugin-search-1.8.2.tgz"
   "version" "1.8.2"
@@ -7200,6 +7200,11 @@
     "@types/json-schema" "^7.0.5"
     "ajv" "^6.12.4"
     "ajv-keywords" "^3.5.2"
+
+"screenfull@4.2.1":
+  "integrity" "sha1-MkW3vHPSt8mhW9jKr2ll23y8fwQ="
+  "resolved" "https://registry.nlark.com/screenfull/download/screenfull-4.2.1.tgz"
+  "version" "4.2.1"
 
 "section-matter@^1.0.0":
   "integrity" "sha1-6QQZU1BngOwB1Z8pKhnHuFC4QWc="
