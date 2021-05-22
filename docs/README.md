@@ -1,5 +1,8 @@
 ---
 home: true
+# isShowTitleInHome: false
+# actionText: Guide
+# actionLink: /views/other/guide
 # heroImage: /home-bg.jpg
 # heroImageStyle: {
 #   maxHeight: '200px',
