@@ -34,7 +34,7 @@ catalog: true
 
 **思路** [O(nlogn)]：按礼物的价值/重量比从大到小依次选取礼物，对选取的礼物尽可能多地装，直到达到总重量w
 
-```c++
+```c
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -88,7 +88,7 @@ int main()
 
 **思路** [O(nlogn)]：将所有电影按结束时间从小到大排序，第一步选结束时间最早的那部电影。 然后，每步都选和上一部选中的电影不冲突且结束时间最早的电影。
 
-```c++
+```c
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -161,7 +161,7 @@ int main()
   
   需要用优先队列存放已经分配的畜栏，并使得结束时间最早的畜栏始终位于队列头部。
 
-```c++
+```c
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -257,7 +257,7 @@ int main()
   
   3) 考察 seg[i] 时，若 noCoveredMinX2 >= seg[i].x1，先不急于在 seg[i].x1 放雷达，接着往下看，并看看是否要将 noCoveredMinX2 更新为 seg[i].x2。若 noCoveredMinX2 < seg[i].x1，则说明必须放一个雷达了，否则以后就再也覆盖不到 noCoveredMinX2 所属的区间了。这个雷达可放在 seg[i-1].x1。放完雷达后，令  noCoveredMinX2 = seg[i].x2，再继续
 
-```c++
+```c
 #include <iostream>
 #include <algorithm>
 #include <cmath>

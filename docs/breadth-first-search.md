@@ -53,7 +53,7 @@ top:
 
 - **框架:**
 
-  ```c++
+  ```c
   void dbfs()
   {
       1.将起始节点放入队列q0, 将目标节点放入队列q1;
@@ -85,7 +85,7 @@ top:
 
 #### [**Catch That Cow**](http://poj.org/problem?id=3278)
 
-```c++
+```c
 #include <iostream>
 #include <cstring>
 #include <queue>
@@ -157,7 +157,7 @@ int main()
 - 每次从队列拿出一个元素，扩展其相邻的4个元素入队列 （要判重）， 直到队头元素为终点为止。队列里的元素记录了指向父节点（上一步）的指针
 - 队列不能用 STL 的 queue 或 deque，要自己写。用一维数组实现，维护一个队头指针和队尾指针
 
-```c++
+```c
 #include <iostream>
 #include <vector>
 using namespace std;

@@ -26,7 +26,7 @@ top:
 
 ### 在图上寻找最优（步数最少）路径
 
-```c++
+```c
 Node bestPath[MAX_LEN];
 Node path[MAX_LEN]; // MAX_LEN 节点总数
 int minSteps = INFINITE; // 最优路径步数
@@ -95,7 +95,7 @@ int main() {
 - 一个连通子图，往里头加任何一个图里的其他点，就会变得不连通，那么这个连通子图就是极大连通子图。
 - 对每一个房间，深度优先搜索，从而给这个房间能够到达的所有位置染色。最后统计一共用了几种颜色，以及每种颜色的数量。
 
-```c++
+```c
 #include <iostream>
 #include <stack>
 #include <cstring>
@@ -164,7 +164,7 @@ int main()
 - 从(i, j+1) 出发，走 n-1 步的方案数。前提：(i, j+1) 还没走过
 - 从 (i, j-1) 出发，走 n-1 步的方案数。前提：(i, j-1) 还没走过
 
-```c++
+```c
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -213,7 +213,7 @@ int main()
 - 1）如果当前已经找到的最优路径长度为 L，那么在继续搜索的过程中，总长度已经大于等于 L 的走法，就可以直接放弃，不用走到底了
 - 2）如果到达某个状态 A 时，发现前面曾经也到达过 A，且前面那次到达 A 所花代价更少，则剪枝。这要求保存到达状态 A 的到目前为止的最少代价。 **(保存中间计算结果用于最优性剪枝)**
 
-```c++
+```c
 #include <iostream> 
 #include <vector> 
 #include <cstring> 
@@ -312,7 +312,7 @@ int main()
   - 搭建过程中发现还没搭的那些层的体积，一定会超过还缺的体积，则停止搭建**（可行性剪枝）**
   - 搭建过程中发现还没搭的那些层的体积，最大也到不了还缺的体积，则停止搭建**（可行性剪枝）**
 
-```c++
+```c
 #include <iostream> 
 #include <vector> 
 #include <cstring> 

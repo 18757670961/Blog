@@ -41,7 +41,7 @@ top:
 
 ### 归并排序 O(nlog(n))
 
-```c++
+```c
 #include <iostream> 
 using namespace std;
 
@@ -92,7 +92,7 @@ int main()
 
 ### 快速排序
 
-```c++
+```c
 #include <iostream> 
 using namespace std;
 
@@ -140,7 +140,7 @@ int main()
 
 ### Binary search O(log(n))
 
-```c++
+```c
 int BinarySearch (int a[], int size, int p)
 {
 	int l = 0; // left pointer
@@ -186,7 +186,7 @@ int BinarySearch (int a[], int size, int p)
   - a > k    对右边 a-1 个元素再进行 arrangeRigth(k)
   - a < k    对左边 b 个元素再进行 arrangeRight(k-a)
 
-```c++
+```c
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -287,7 +287,7 @@ int main()
 
   **关键**：左半边和右半边都是排好序的。比如，都是从大到小排序的。这样，左右半边只需要从头到尾各扫一遍，就可以找出由两边各取一个数构成的逆序个数
 
-```c++
+```c
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -371,7 +371,7 @@ int main()
 
   若 D 不可行，则在新 [L,R] 中继续尝试 (R= D - 1) 
 
-```c++
+```c
 #include <iostream>
 #include <algorithm>
 using namespace std;

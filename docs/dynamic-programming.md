@@ -182,7 +182,7 @@ top:
 - 没必要用二维 maxSum 数组存储每一个 MaxSum(r, j), 只要从底层一行行向上递推，那么只要一维数组maxSum[100] 即可, 即只要存储一行的 MaxSum 值就可以。
 - 进一步考虑，连 maxSum 数组都可以不要，直接用 D 的第 n 行替代 maxSum 即可。
 
-```c++
+```c
 /******* 自底向上 & 滚动数组 ********/
 
 #include <iostream>
@@ -239,7 +239,7 @@ int main()
 
   maxLen (k) 的值，就是在 ak 左边，“终点” 数值小于 ak，且长度最大的那个上升子序列的长度再加1。因为 ak 左边任何 “终点” 小于 ak 的子序列，加上 ak 后就能形成一个更长的上升子序列。
 
-```c++
+```c
 #include <iostream>
 #include <cstring>
 #include <algorithm>
@@ -326,7 +326,7 @@ int main()
 
   S1[i - 1] != s2[j - 1] 时，MaxLen(S1, S2) 不会比 MaxLen(S1, S2j-1 ) 和 MaxLen(S1i-1, S2) 两者之中任何一个小，也不会比两者都大
 
-```c++
+```c
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -375,7 +375,7 @@ int main()
 
 **思路**：假定数字串长度是 n，添完加号后，表达式的最后一个加号添加在第 i 个数字后面，那么整个表达式的最小值，就等于在前 i 个数字中插入 m – 1 个加号所能形成的最小值，加上第 i + 1到第 n 个数字所组成的数的值（i从1开始算）。
 
-```c++
+```c
 #include <iostream>
 #include <cmath>
 #include <cstring>
@@ -499,7 +499,7 @@ int main()
 - 此问题仅在询问容积40是否可达，40是个很小的数，可以考虑对值域空间，即对容积的可达性进行动态规 划。
 - 定义一维数组 int sum[41]，依次放入物品，计算每次放入物品可达的容积，并在相应空间设置记录，最后判断 sum[40] 是否可达，到达了几次。
 
-```c++
+```c
 #include <iostream>
 #define MAX 41
 using namespace std;
@@ -533,7 +533,7 @@ int main()
 
 **思路**：本题如用记忆型递归，需要一个很大的二维数组，会超内存。注意到这个二维数组的下一行的值，只用到了 上一行的正上方及左边的值，因此可用滚动数组的思想，只要一行即可。即可以用一维数组，用 “人人为我” 递推型动规实现。
 
-```c++
+```c
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -578,7 +578,7 @@ int main()
 - L(i, j) 等于 (i, j) 周围四个点中，比 (i, j) 低，且 L 值最大的那个点的 L 值，再加1
 - 将所有点按高度从小到大排序。每个点的 L 值都初始化为1。从小到大遍历所有的点。经过一个点 (i, j) 时，用递推公式求 L(i, j)
 
-```c++
+```c
 // 人人为我
 
 #include <iostream>

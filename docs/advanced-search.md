@@ -38,7 +38,7 @@ top:
 
 - A算法的搜索效率很大程度上取决于估价函数h(n)。一般说来，**在满足h(n)≤h(n)的前提下，h(n)的值越大越好。**
 
-```c++
+```c
 open = [start]
 closed = []
     
@@ -118,7 +118,7 @@ while (open不为空)
 
   - 选当前棋局节点的估价值最大的那个子节点，作为此步行棋的走法。
 
-  ```c++
+  ```c
   int MinMax(int depth)
   {
       if (SideToMove() == MAX_SIDE)
@@ -184,7 +184,7 @@ while (open不为空)
 
   若结点x是Max节点，其兄弟节点（父节点相同的节点）中，已经求到的最小估价值是a（有些兄弟节点的估价值，可能还没有算出来） 那么在对x的子节点进行考查的过程中，如果一旦发现某子节点的估价值 >= a,则不必再考查后面的x的子节点了。
 
-```c++
+```c
 function alphabeta(node, depth, α, β, maximizingPlayer)
     if depth = 0 or node is terminal node
         return the heuristic value of node
