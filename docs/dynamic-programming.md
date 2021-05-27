@@ -112,7 +112,7 @@ top:
   }
   ```
 
-  ![](71b19194/recursive.png)
+  ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/dynamic-programming/recursive.png?sign=f362f77682d4d9cdb628a36c3266d713&t=1622129176)
 
 - **自底向上实现 [ 时间O(n) 空间O(n) ]**
 
@@ -127,7 +127,7 @@ top:
   }
   ```
 
-  ![](71b19194/dp.png)
+  ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/dynamic-programming/dp.png?sign=0d9e387eef9b87b00064cf757435b4cb&t=1622129160)
 
 - **自顶向下实现 [ 时间O(n) 空间O(n) ]**
 
@@ -150,7 +150,7 @@ top:
   }
   ```
 
-  ![](71b19194/memory.png)
+  ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/dynamic-programming/memory.png?sign=dbe571105c672e0c5583975f115b7bb5&t=1622129169)
 
 - **状态压缩 [ 时间O(n) 空间O(1) ]**
 

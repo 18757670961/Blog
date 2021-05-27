@@ -416,7 +416,7 @@ public class AccountTest
 
 **final**: any field declared with keyword final is constant
 
-![](b9635e54/math.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/math.jpg?sign=dfd5d7ad7909b308c4f1e29c9bc24d02&t=1622128766)
 
 ### Declaring Methods with Multiple Parameters
 
@@ -489,7 +489,7 @@ public class MaximumFinder
 
 > casting a primitive-type value to another primitive type may change the value if the new type is not a valid promotion. For example, casting a floating-point value to an integer value may introduce truncation errors (loss of the fractional part) into the result
 
-![](b9635e54/promotion.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/promotion.jpg?sign=75423ece4326b401f8a97d071af20b6b&t=1622128800)
 
 ### Case Study: Secure Random-Number Generation
 
@@ -1030,7 +1030,7 @@ public class ArrayManipulations
 
 **generic class**: enable you to specify the exact type that will be stored in a collection and give you the benefits of compile-time type checking, only nonprimitive types can be used to declare variables and create objects of generic classes (boxing allows primitive values to be wrapped as objects)
 
-![](b9635e54/arraylist.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/arraylist.jpg?sign=8758a62e84c339f556c03e5cfd0448e0&t=1622128699)
 
 ```java
 import java.util.ArrayList;
@@ -1091,7 +1091,7 @@ public class ArrayListCollection
 
 ### Generic Collections
 
-![](b9635e54/collections.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/collections.jpg?sign=b1612fe8e00f14cd9ab6a2d106ba1b4b&t=1622128719)
 
 #### Type-Wrapper Classes
 
@@ -1327,7 +1327,7 @@ public class UsingToArray
 
 ### Collection Methods
 
-![](b9635e54/collectionmethods.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/collectionmethods.jpg?sign=725326e2fb0664e3461546beabc60e17&t=1622128710)
 
 #### Method sort
 
@@ -2994,7 +2994,7 @@ objects of all classes that extend a common superclass can be treated as objects
 
 A Subclass Object Contains the Instance Variables of All of Its Superclasses
 
-![](b9635e54/uml.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/uml.jpg?sign=651fe7ee5a8902971e37fc19e22dee37&t=1622128811)
 
 #### protected Members
 
@@ -3170,9 +3170,9 @@ public class BasePlusCommissionEmployee extends CommissionEmployee
 
 #### Class Object
 
-![](b9635e54/object1.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/object1.jpg?sign=1d42346b136188a87ce51d02ae901738&t=1622128775)
 
-![](b9635e54/object2.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/object2.jpg?sign=53cf967833bb2705e36107eba6f77f48&t=1622128784)
 
 ### Polymorphism and Interfaces
 
@@ -3204,9 +3204,9 @@ polymorphism enables you to deal in **generalities** and let the execution-time 
 
 #### Case Study: Payroll System Using Polymorphism
 
-![](b9635e54/uml2.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/uml2.jpg?sign=35694ae5a2245f0b6e706329fd3bd49e&t=1622128819)
 
-![](b9635e54/payroll.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/payroll.jpg?sign=3b7f357278379922e0ee341928a255fd&t=1622128792)
 
 ```java
 // Fig. 10.4: Employee.java
@@ -3518,7 +3518,7 @@ all methods in a final class are implicitly final
 
 - when a method parameter is declared with a superclass or interface type, the method processes the object passed as an argument **polymorphically**
 
-![](b9635e54/uml3.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/uml3.jpg?sign=5fa39448a65e135bd38a1005fe1b846e&t=1622128830)
 
 ```java
 // Fig. 10.11: Payable.java
@@ -3726,9 +3726,9 @@ public class SalariedEmployee extends Employee
 
 #### Common Interface of Java API
 
-![](b9635e54/interface1.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/interface1.jpg?sign=b3c696a5d47d1df9ccbc332a97366a98&t=1622128747)
 
-![](b9635e54/interface2.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/interface2.jpg?sign=5ae4b4bcee799a266d63eef326a6ef50&t=1622128759)
 
 #### Java SE 8 Interface Enhancements
 
@@ -4324,7 +4324,7 @@ public class DivideByZeroWithExceptionHandling
 
 ### Java Exception Hierarchy
 
-![](b9635e54/exception.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-fundaments/collections.jpg?sign=e6f621d58c80321f1e55d705dcca96cb&t=1622128730)
 
 only **Throwable** objects can be used with exception-handling mechanism
 

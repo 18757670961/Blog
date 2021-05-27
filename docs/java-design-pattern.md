@@ -13,7 +13,7 @@ top:
 
 # Design Pattern
 
-![](a2e5cc6a/table.png)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-design-pattern/table.png?sign=cb38de76d34cf1409e7cb1149d5c4db2&t=1622128934)
 
 ## Creational Patterns
 
@@ -25,7 +25,7 @@ top:
 
 #### Structure
 
-![](a2e5cc6a/singleton-pattern.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-design-pattern/singleton-pattern.jpg?sign=0605c4162d0a48a5c9cc945d72d9ed07&t=1622128915)
 
 #### Applicability
 
@@ -92,7 +92,7 @@ class Application is
 
 #### Structure
 
-![](a2e5cc6a/factory-pattern.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-design-pattern/factory-pattern.jpg?sign=7da46d60b34af701d515b25c77c29570&t=1622128896)
 
 #### Applicability
 
@@ -194,7 +194,7 @@ class Application is
 
 #### Structure
 
-![](a2e5cc6a/adapter-pattern.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-design-pattern/adapter-pattern.jpg?sign=aaaeb974429e3683facb541880d2a095&t=1622128879)
 
 #### Applicability
 
@@ -275,7 +275,7 @@ hole.fits(large_sqpeg_adapter) // false
 
 #### Structure
 
-![](a2e5cc6a/observer-pattern.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-design-pattern/observer-pattern.jpg?sign=ca9590ea699dc0b4b0338379ef20df22&t=1622128907)
 
 #### Applicability
 
@@ -383,7 +383,7 @@ class Application is
 
 #### Structure
 
-![](a2e5cc6a/state-pattern.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/java-design-pattern/state-pattern.jpg?sign=c0a9cda848f9ace3eae7db5f22c89cf3&t=1622128925)
 
 #### Applicability
 

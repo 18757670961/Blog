@@ -34,7 +34,7 @@ top:
 
 ### 默认分区结构
 
-![](50abf9ec/1.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/1.jpg?sign=b0c6d6637c5564d22ce6c785d4b62576&t=1622127649)
 
 创建默认分区结构可以使用 DiskPart 命令行工具完成。使用 Windows 10 操作系统安装光盘或U盘启动至安装界面，然后按下 Shift+F10 组合键打开命令提示符或使用 WinPE 启动至命令提示符，输入 diskpart 进入其命令操作界面并执行如下命令完成创建过程。
 
@@ -69,7 +69,7 @@ exit
 
 ### 推荐分区结构
 
-![](50abf9ec/2.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/2.jpg?sign=023a7992ba69628424c6487966b0e4c4&t=1622127923)
 
 微软推荐分区结构只是在默认分区结构上增加了一个用于存储系统恢复映像的恢复分区，此分区为非必备分区。创建推荐分区结构，只需在 DiskPart 中执行如下命令即可完成：
 
@@ -117,7 +117,7 @@ exit
 
 ### 默认分区结构
 
-![](50abf9ec/3.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/3.jpg?sign=6143cb1a1d14c6598072c2afdc68ce0b&t=1622128079)
 
 创建默认分区结构，同样需要在 Windows 安装程序界面或 WinPE 环境下使用 DiakPart 命令行工具。在 DiskPart 中执行如下命令。
 
@@ -167,7 +167,7 @@ exit
 
 ### 推荐分区结构
 
-![](50abf9ec/4.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/4.jpg?sign=4c46b1c4026e5aab38b611aeee57a797&t=1622128176)
 
 推荐分区结构也是在默认分区结构的基础上新增一个用于存储恢复映像的恢复分区。 同样在 DiskPart 下执行如下命令完成创建过程。
 
@@ -231,7 +231,7 @@ exit
 
 检测计算机使用何种固件最简单直接的方法是使用磁盘管理器或 DiskPart 命令行工具查看硬盘的分区结构是否具备 ESP 分区以及 MSR 分区。此外，还可以按下 Win+R 组合键，打开“运行”对话框输入 msinfo32 并按 Enter 键，打开“系统信息”，如下图所示，查看右侧列表中的“BIOS 模式”项目值，如果值为传统即为使用 BIOS 固件，如果值为 UEFI 即为使用 UEFI 固件。
 
-![](50abf9ec/5.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/5.jpg?sign=8047bed785c03c375107c80e88d9e852&t=1622128185)
 
 ## 制作安装 U 盘 (命令行)
 
@@ -286,7 +286,7 @@ Windows 10 操作系统中，使用磁盘管理工具即可完成硬盘配置转
 
 2. 在下图中，选择要转换为动态磁盘的硬盘，然后单击右键在出现的菜单中选择 “转换到动态磁盘”。
    
-   ![](50abf9ec/6.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/6.jpg?sign=a8cd0c747cbfb8f1c4d8d78ec596b6b0&t=1622128193)
 
 3. 在出现的“转换为动态磁盘”界面中选择需要转换的硬盘，Windows 10 操作系统支持同时转换多个硬盘为动态磁盘。
 
@@ -477,7 +477,7 @@ assign
 
 文件或文件夹压缩完成后，其图标右下方会出现两个相对的蓝色箭头，以示与其他类型文件区别，如图 7-56 所示。
 
-![](50abf9ec/7.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/7.jpg?sign=613671563462791f87dea2235a449aec&t=1622128202)
 
 ### 命令行
 
@@ -561,7 +561,7 @@ mklink /J lizhipeng1 lizhipeng
 
 软链接文件夹和快捷方式图标相同，如何去区别两者呢？在命令提示符下定位到软链接所在目录，然后执行 dir 命令，会显示当前目录下的文件或文件夹信息，其中有 JUNCTION 字样的即为软链接
 
-![](50abf9ec/8.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/8.jpg?sign=68b16cb4cf3a1e5e16194380ccbb025b&t=1622128215)
 
 删除软链接只需删除创建的软链接文件即可。
 
@@ -632,7 +632,7 @@ Windows 10操作系统中默认没有启用 Hyper-V，需要用户手动启用�
 
 - 使用 Cortana 中搜索“启用或关闭 Windows 功能”并打开。然后在打开的“Windows 功能”界面中勾选“Hyper-V”，然后单击“确定”，最后等待操作系统安装完成，重新启动计算机之后即可使用 Hyper-V。
   
-  ![](50abf9ec/9.jpg)
+  ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/9.jpg?sign=9d2531d39d72fffe099e3f86a1284d4f&t=1622128224)
 
 - 在操作系统中挂载 Windows 10 操作系统安装镜像文件到虚拟光驱或插入操作系统安装光盘，这里以 H 为虚拟光驱盘符为例，然后以管理员身份运行命令提示符执行如下命令。
   
@@ -648,31 +648,31 @@ Windows 10操作系统中默认没有启用 Hyper-V，需要用户手动启用�
 
 1. 在 Hyper-V 管理器右侧“操作”窗格中，单击“新建”，然后选择“虚拟机”，运行“新建虚拟机向导”。向导第一页为创建 Hyper-V 虚拟机注意事项，可勾选左下角 “不再显示此页”选项，下次创建虚拟机时将不再显示，然后单击“下一步”
    
-   ![](50abf9ec/10.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/10.jpg?sign=ed2f722c252e3431d4bb15ffd33f984e&t=1622127700)
 
 2. 在“指定名称和位置”页中，设置创建的虚拟机名称以及存储位置。这里要注意的是，创建的虚拟机文件会比较大，文件默认存储于 C 盘，所以请注意存储虚拟机的硬盘分区可用空间。然后单击“下一步”。
    
-   ![](50abf9ec/11.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/11.jpg?sign=5eb62f72086ae5d0953ae1e3124f734b&t=1622127800)
 
 3. 选择虚拟机版本。虚拟机版本分为两代，第一代指使用 BIOS 固件， 第二代指使用 UEFI 固件并开启安全启动功能。如果使用第二代虚拟机，则默认情况下只能安装 Windows 8 操作系统以后的操作系统版本，虚拟机一旦创建即无法修改版 本。这里选择第一代，然后单击“下一步”。
    
-   ![](50abf9ec/12.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/12.jpg?sign=497e52d0347cdadec290376c60aa620a&t=1622127816)
 
 4. 在“分配内存”页中，设置虚拟机启动内存大小。在 Hyper-V 中虚拟内存最小可设置为 8MB，最大可为物理内存容量的 70%，请根据所要安装操作系统的要求合理设置虚拟内存大小。Hyper-V 支持动态内存，所谓动态内存就是针对不同虚拟机，在指定的内存范围内根据虚拟机中的应用优先级来自动调整虚拟机对物理内存的占用大小，在应用性能和内存占用大小方面进行自动平衡，以达到性能优化的目的。建议启用此功能，然后单击“下一步”。
    
-   ![](50abf9ec/13.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/13.jpg?sign=f9e59463291af76834da20eb50c51522&t=1622127825)
 
 5. 在“配置网络”页中，选择虚拟机连接网络所用到的网络交换机。 如果是第一次使用 Hyper-V，保持此页默认设置，然后单击“下一步”。
    
-   ![](50abf9ec/14.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/14.jpg?sign=259b58e63030c11359a7c1affb5dfd41&t=1622127835)
 
 6. 在“连接虚拟硬盘”页中，指定要创建虚拟硬盘（VHD）的名称、位置以及大小。 虚拟磁盘用来安装操作系统，同时也可以使用已创建的虚拟磁盘。 虚拟硬盘大小按照使用需要合理设置即可。
    
-   ![](50abf9ec/15.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/15.jpg?sign=79362e2af366eb6b265c9f99c4c66f95&t=1622127849)
 
 7. 在”安装选项”页上，选择“从启动 CD/DVD-ROM 安装操作系统”。安装媒介可以选择物理驱动器中的安装光盘，也可以选择使用操作系统安装镜像文件，还可以选择在创建完虚拟机后再安装操作系统。选择相应选项之后，单击“下 一步”，随后会出现虚拟机的设置摘要，核对虚拟机设置信息，最后单击“完成”。此时，Hyper-V 开始自动按照设置的虚拟机参数开始创建虚拟机，等待完成即可。
    
-   ![](50abf9ec/16.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/16.jpg?sign=a4780b484168a35475580f32dc13e061&t=1622127890)
 
 ### 虚拟机管理
 
@@ -717,7 +717,7 @@ Windows 10 操作系统支持 VHDX 格式虚拟硬盘文件且支持从 VHDX 文
 
 在“新建虚拟机向导”中的“连接虚拟硬盘”页，可以选择“使用现有虚拟硬盘”来启动已安装了操作系统的 VHDX 文件，配置好其他设置之后单击 “完成”，然后运行虚拟机即可使用。
 
-![](50abf9ec/17.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/17.jpg?sign=6cd5d6156401f73be9d068cce616d519&t=1622127898)
 
 ### 配置 Hyper-V 虚拟网络
 
@@ -731,23 +731,23 @@ Hyper-V 是通过模拟一个标准的（ISO/OSI 二层）交换机来支持以�
 
 1. 在 Hyper-V 管理器右侧“操作”窗格中选择“虚拟交换机管理器”，在随后出现的虚拟交换机管理界面中，选择要创建虚拟交换机类型，这里选择“外部”类型，然后单击“创建虚拟交换机”
    
-   ![](50abf9ec/18.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/18.jpg?sign=b6f7c607046b0c7c10d9545a09cab8cf&t=1622127906)
 
 2. 在虚拟交换机属性页面中，可以选择虚拟交换机连接至物理机哪个网络设备。这里选择当前物理计算机正在使用的网卡。然后单击“确定”，虚拟交换机创建完毕。
    
-   ![](50abf9ec/19.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/19.jpg?sign=f9897e1f392ee6f43e2a5b31ce8833d7&t=1622127914)
 
 3. 打开虚拟机设置页面。在左侧一栏中选择“网络适配器”，打开网络适配器配置页面，页面顶端可以看到关于虚拟交换机的选项，在下拉列表中选择上一步创建的交换机，然后单击“确定”，等程序配置完毕之后，路由器等网络设备自动为虚拟机分配 IP 地址，虚拟机即可连接至 Internet。
    
-   ![](50abf9ec/20.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/20.jpg?sign=83d549a10403c3f786bbffed80a8ba32&t=1622127949)
 
 创建虚拟交换机之后，打开物理机网络连接设置界面，即可看到创建的虚拟交换机， 可以像对待物理设备一样对其进行设置。
 
-![](50abf9ec/21.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/21.jpg?sign=0feae45b0027816b2aa1581029551319&t=1622127959)
 
 ## 虚拟磁盘（VHD）
 
-![](50abf9ec/22.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/22.jpg?sign=90767f101e93a60a0a029f7910b0eaac&t=1622127982)
 
 在 Windows 10 操作系统中支持新版虚拟磁盘文件即 VHDX 文件，与 VHD 文件相比， VHDX 支持更大的存储空间，还可以在计算机突然断电的情况下提供数据损坏保护， 并且优化动态磁盘和差分磁盘的结构对齐方式，以防止在使用了高级格式化功能（俗称 4K 对齐）的物理磁盘上出现读写性能下降的情况。
 
@@ -793,13 +793,13 @@ Hyper-V 是通过模拟一个标准的（ISO/OSI 二层）交换机来支持以�
   
   2. 在磁盘管理器的“操作”菜单下选择“创建 VHD”选项，打开创建和附加虚拟磁盘程序
      
-     ![](50abf9ec/23.jpg)
+     ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/23.jpg?sign=adaf6ea72b912f19ca3834c3fbddf6dd&t=1622127990)
   
   3. 在创建和附加虚拟磁盘程序中，单击“浏览”选择 VHD 文件的存储目录并且命名 VHD 文件。VHD 大小根据使用情况合理设置即可，默认以 MB 为单位。上节已经介绍过 VHD 的两种格式，如果只是在 Windows 8 或 Windows 10 操作系统中使用 VHD， 则推荐采用 VHDX 文件格式，此时虚拟硬盘 VHD 类型操作系统默认使用动态扩展。 如果考虑到 VHD 的兼容性，要在 Windows 7 操作系统中使用此 VHD，则推荐使用 VHD 文件格式，VHD 类型默认推荐为固定大小。这里选择 VHD 为 VHDX 文件格式，VHD 类型为动态扩展，单击“确定”，开始创建 VHD。
   
   4. 创建完成 VHD 之后，磁盘管理器会自动附加此 VHD，但是该 VHD 没有被初始化， 也就是不能被逻辑磁盘管理器访问，所以也不会在文件资源管理器中显示此 VHD
      
-     ![](50abf9ec/24.jpg)
+     ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/24.jpg?sign=28275f500d77b5dee74ce76986fa2eb8&t=1622127999)
   
   5. 在磁盘列表中选择已被附加的 VHD（也就是列表中的磁盘 2）并单击右键，在弹出的菜单中选择“初始化磁盘”选项，然后在初始化磁盘界面中勾选磁盘 2，如果有多个 VHD 可以同时进行初始化操作，磁盘分区格式选择默认即可，然后 单击“确定”即可完成 VHD 初始化。
   
@@ -934,7 +934,7 @@ bcdedit /delete {guid} /cleanup
 
 {guid} 为安装至 VHD 中的操作系统标识符，可以使用 bcdedit /v 命令进行查看
 
-![](50abf9ec/25.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/25.jpg?sign=f04dc48af3630a858350a5e257c55b30&t=1622128010)
 
 ## 回收休眠文件所占用空间
 
@@ -972,7 +972,7 @@ Sysprep 是用于准备 Windows 安装映像文件的工具，其可以删除已
 
 以管理员身份运行命令提示符，并切换至 %WINDIR%\System32\Sysprep 目录，然后输入 sysprep 命令打开系统准备工具。其中系统清理操作分为进入系统全新体验（OOBE）以及进入系统审核模式两种，OOBE 就是进入桌面之前设置帐户等初始化选项的阶段，审核模式适用于计算机生产商定制操作系统，这里不做介绍。下图中的“通用”是指操作系统处理硬件抽象层（HAL）以及删除系统特定信息以便封装的操作系统能在其他计算机上安装使用。关机选项是指 Sysprep 一般化操作系统之后进行的操作，分别有关机、重新启动和退出。
 
-![](50abf9ec/26.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/26.jpg?sign=bcadfe1ceb378d07ea8d9d60139f7ec5&t=1622128018)
 
 此外，Sysprep 还可以使用命令完成一般化操作，以下为 Sysprep 命令选项：
 
@@ -1011,7 +1011,7 @@ dism /capture-image /imagefi le:f:\install.wim /capturedir:d:\ /name:”Windows 
 
 Windows 10 操作系统同样延续了 Windows 8 操作系统中的系统故障修复选项“高级 选项”菜单，其实这也就是 Windows Vista/7 操作系统中的 Windows RE（Windows 恢 复环境）的升级版，界面同样也完全 Modern 化。
 
-![](50abf9ec/27.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/27.jpg?sign=4369521227e502ead18f1b39020b8c4e&t=1622128029)
 
 - **系统还原**：使用创建的系统还原点，还原操作系统到早前的状态，而且还原之前程序会对用户的身份进行确认。
 
@@ -1031,7 +1031,7 @@ Windows 10 操作系统同样延续了 Windows 8 操作系统中的系统故障�
 
 1. 在 Modern 设置中依次打开“更新和安全”-“恢复”，然后在右侧高级启动选项下单击“立即重启”。重新启动计算机之后会自动进入高级选项界面。
    
-   ![](50abf9ec/28.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/28.jpg?sign=7a87556773325523f7e3adf04f98dc87&t=1622128059)
 
 2. 微软为 Windows 10 操作系统中的 shutdown 命令行工具提供了一个新的参数 /o，使用此参数可进入高级选项菜单。以管理员身份运行命令提示符并执行如下命令。
    
@@ -1049,7 +1049,7 @@ Windows 10 操作系统同样延续了 Windows 8 操作系统中的系统故障�
 
 1. 打开高级选项菜单并选择“启动设置”选项，然后重启计算机之后即可进入“启动设置”菜单，其中可以选择进入安全模式。
    
-   ![](50abf9ec/29.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/29.jpg?sign=e1eb29cc6c5dcd602fa3f5ba92957830&t=1622128069)
    
    - **启用调试**：启动时通过串行电缆将调试信息发送到另一台计算机。必须将串行电缆连接到波特率设置为 115200 的 COM1 端口。如果正在或已经使用远程安装服务在该计算机上安装 Windows，则可看到与使用远程安装服务还原或恢复系统相关的附加选项。
    - **启用启动日志记录**：启动计算机，同时将由操作系统加载或没有加载的所有驱动程序和服务记录到启动日志文件，该启动日志文件称为 ntbtlog.txt，位于 %systemroot% 目录。使用安全模式、带网络连接的安全模式和带命令提示符的安全模式时，操作系统会将一个加载所有驱动程序和服务的列表添加到启动日志文件。启动日志对于确定操作系统启动故障原因很有帮助。
@@ -1072,13 +1072,13 @@ Windows 10 操作系统同样延续了 Windows 8 操作系统中的系统故障�
    
    重新启动计算机，操作系统会自动进入 Windows 启动管理器，按下 F8 键即可进入启动设置菜单。
    
-   ![](50abf9ec/30.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/30.jpg?sign=003c0d0f09e1c6efc9da5dae838b261b&t=1622128115)
 
 ## WIMBoot
 
 WIMBoot 是一种支持从特定 Windows 映像格式文件（WIM 文件）读取并使用操作系统文件的技术，使用 WIMBoot 可以把操作系统文件存储于 WIM 这种压缩文件格式中，其有效的减少了硬盘空间占用率。
 
-![](50abf9ec/31.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/31.jpg?sign=5df73d31921518b784d33a1bfc37f46d&t=1622128097)
 
 ### 使用 WIMBoot 安装操作系统
 
@@ -1234,7 +1234,7 @@ WIMBoot 是一种支持从特定 Windows 映像格式文件（WIM 文件）读�
 
 - 使用磁盘管理器：按下 Win+X 组合键，在出现的菜单中选择“磁盘管理”，打开磁盘管理界面。如果操作系统使用 WIMBoot 功能从 WIM 文件启动，则在 Windows 分区 上具有“Wim 引导”字样，如图所示。
   
-  ![](50abf9ec/32.jpg)
+  ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/32.jpg?sign=9b222697b729b68f2f4e479a1b5b5c40&t=1622128123)
 
 - 使用命令行工具：以管理员身份运行命令提示符或 PowerShell，然后执行如下命令。
   
@@ -1296,11 +1296,11 @@ dism /capture-customimage /capturedir:c:
 
 2. 在本地用户与组管理器中，依次定位至“用户”-“Administrator”并双击打开
    
-   ![](50abf9ec/33.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/33.jpg?sign=2599b8801069ef061e4fe06a1527b10c&t=1622128132)
 
 3. 在 Administrator 帐户属性页中，去掉“帐户已禁用”前面的复选框的勾，然后单击“确定”，然后注销当前登录帐户，即可使用 Administrator 帐户登录操作系统。如果是第一次以 Administrator 帐户登录操作系统，操作系统会对 Administrator 帐户进行初始化操作。如要为 Administrator 帐户设置密码，在上图中选中 Administrator 帐户并单击右键在出现的菜单中选择“设置密码”即可。
    
-   ![](50abf9ec/34.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/34.jpg?sign=43f50fa71a36fcf55113932c7a6093da&t=1622128141)
 
 ## 使用 Net User 命令管理帐户
 
@@ -1329,7 +1329,7 @@ net user administrator /active:no
 
 1. 按下 Win+R 组合键，在“运行”对话框中输入 netplwiz 并回车，打开用户帐户设置界面
    
-   ![](50abf9ec/35.jpg)
+   ![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/35.jpg?sign=ca4cf2564349e1caf1b450c064d59ff8&t=1622128149)
 
 2. 勾选图中的“要使用计算机，用户必须输入用户名和密码”选项，然后选择要自动登录的帐户，最后单击“确定”。
 
@@ -1391,7 +1391,7 @@ makewinpemedia /ufd e:\winpe_64 i:
 
 安装 64 位 WinPE 至 U 盘，i: 为 U 盘盘符。此命令会格式化 U 盘，请注意备份数据。
 
-![](50abf9ec/36.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/36.jpg?sign=b74acad722d6529da5302af369df6bca&t=1622128157)
 
 ### 制作 WinPE 镜像文件
 
@@ -1410,7 +1410,7 @@ makewinpemedia /iso e:\winpe_64 e:\winpe_64.iso
 
 **Tip：使用 Windows ADK 制作的 WinPE 支持 UEFI 与 BIOS 固件启动。在 WinPE 环境下任何对 WinPE 系统做的修改或设置都将在重新启动计算机之后丢失。**
 
-![](50abf9ec/37.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/mysteries-of-windows/37.jpg?sign=a38b6203b9adbd89ca23f358b5830a88&t=1622128165)
 
 如果觉的 WinPE 中自带的命令行工具不能满足使用需求，可以向 WinPE 中添加绿色版第三方工具软件。在部署和映像工具中输入如下命令挂载 WinPE 核心文件 boot.wim。
 

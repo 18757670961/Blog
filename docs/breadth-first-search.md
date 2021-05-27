@@ -18,7 +18,7 @@ top:
 
 ### 算法（利用Queue）
 
-![](13300955/bfs.png)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/breadth-first-search/bfs.png?sign=1de7ef191afedd5e20337f9529afe766&t=1622129349)
 
 可确保找到最优解，但是因扩展出 来的节点较多，且多数节点都需要保存，因此需要的存储空间较大。用队列存节点。
 

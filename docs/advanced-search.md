@@ -172,7 +172,7 @@ while (open不为空)
   }
   ```
 
-![](2f400e37/pruning.png)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/advanced-search/pruning.png?sign=e4bac0ff68c19dcaa93119a34fc562f7&t=1622129389)
 
 - **Alpha剪枝**
 

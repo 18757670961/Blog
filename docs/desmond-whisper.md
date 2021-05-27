@@ -55,7 +55,7 @@ btw，部分语段是由可爱的3班同学分享的，谨在此深表谢意 ~
 >
 > —— 莫言
 
-![](cf3be2e6/3.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/desmond-whisper/3.jpg?sign=c767b8e461dff9c9f4bd0cc69856554d&t=1622129257)
 
 > 一个人一死，他真真实实的一生便成为故事。许多事情都一样，开始干的人很多，到了最后，便成了某一个人的。
 >
@@ -77,7 +77,7 @@ btw，部分语段是由可爱的3班同学分享的，谨在此深表谢意 ~
 >
 > —— 《人与永恒》 周国平
 
-![](cf3be2e6/4.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/desmond-whisper/4.jpg?sign=6f730dc1f11f8355f130a4886091cf08&t=1622129267)
 
 > 对生活做种种设置是人特有的品性，不光是设置动物，也设置自己。
 >
@@ -99,7 +99,7 @@ btw，部分语段是由可爱的3班同学分享的，谨在此深表谢意 ~
 >
 > —— 《谈独立思考》 茅盾
 
-![](cf3be2e6/5.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/desmond-whisper/5.jpg?sign=f62548cf4ad876b3be06b2e478130707&t=1622129274)
 
 > 人生无非是等和忍的交替。有时是忍中有等，绝望中等待。忍是一种自救，即使自救不了，至少也是一种自尊。
 >
@@ -125,7 +125,7 @@ btw，部分语段是由可爱的3班同学分享的，谨在此深表谢意 ~
 >
 > —— 《少有人走的路》 斯科特派克
 
-![](cf3be2e6/6.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/desmond-whisper/6.jpg?sign=1de8dccc0cec3ca4b7d5e5223ca2c18f&t=1622129281)
 
 > 正是价值判断的不断累积，缔造了我们的人生。
 >
@@ -175,4 +175,4 @@ btw，部分语段是由可爱的3班同学分享的，谨在此深表谢意 ~
 >
 > —— 佚名
 
-![](cf3be2e6/7.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/desmond-whisper/7.jpg?sign=755cff791515b9e6ba2ef9ebfd9adf58&t=1622129288)

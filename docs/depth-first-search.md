@@ -80,7 +80,7 @@ int main() {
 
 每个节点 n 对应一个一维数组 (vector)，里面存放从 n 连出去的边，边的信息包括另一顶点，还可能包含边权值等。
 
-![](7bb877cf/dfs.png)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/depth-first-search/dfs.png?sign=1271ef3551d4b77a191948f8c224386d&t=1622129319)
 
 ------
 

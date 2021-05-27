@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-21 23:34:49
- * @LastEditTime: 2021-05-22 18:15:03
+ * @LastEditTime: 2021-05-27 22:37:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Blog\docs\.vuepress\config.js
@@ -27,7 +27,7 @@ module.exports = {
     author: 'Desmond',
     lastUpdated: 'Last Updated',
     smoothScroll: true,
-    // subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
+    subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
     nav: [
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
       { text: 'About', link: '/about.html', icon: 'reco-account' }

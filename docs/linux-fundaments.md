@@ -34,7 +34,7 @@ top:
 
 ## Linux Organization
 
-![](e8006866/1.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/1.jpg?sign=adfbb47630d7f765950a2170ebc9b563&t=1622128282)
 
 
 
@@ -48,7 +48,7 @@ Every object within a Linux file system is represented by a unique collection of
 
 When you move, copy, or delete a file or directory, all you're really doing is editing its inode attributes, not its ID
 
-![](e8006866/3.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/3.jpg?sign=c142aeb5f8c4ff5621f21bed3ffbb5e5&t=1622128336)
 
 Standard folders under home directory:
 
@@ -80,11 +80,11 @@ Pseudo file's contents (e.g. those exist in /sys/ and /proc/) are dynamically ge
 
 Linux organizes attached storage as **block devices**
 
-![](e8006866/7.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/7.jpg?sign=860af735521757e5cab9297d250f5148&t=1622128376)
 
 sda (storage device A) is the first drive used by system on boot
 
-![](e8006866/8.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/8.jpg?sign=6ff17a82966aea8c8b7011b94ff731b5&t=1622128386)
 
 Each of sda1, sda2, sda5 represents one of partitions created by Linux
 
@@ -94,7 +94,7 @@ Each of sda1, sda2, sda5 represents one of partitions created by Linux
 
 The standard Shell for Linux is the Bash (Bourne-Again Sh), which is a powerful and much improved version of Sh. The default Shell on most Linux distributions is Bash.
 
-![](e8006866/4.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/4.jpg?sign=22ec715a8d63f7b0a9bd34b7306c8748&t=1622128346)
 
 At the Shell prompt, enter the following command to display the name of the Shell you are using：
 
@@ -110,7 +110,7 @@ echo $HOME
 
 You can change the default Shell with the **chsh** (change Shell) command.
 
-![](e8006866/2.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/2.jpg?sign=59afcce4b29a2088ee9a0fa8d0eeafe2&t=1622128321)
 
 ### Command syntax
 
@@ -289,7 +289,7 @@ touch quickly creates an empty file
 
 **Tip**: touching an existing file with touch updates its time stamp without making any changes
 
-![](e8006866/6.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/6.jpg?sign=a85175eff0517974c03bba11d76e5b88&t=1622128368)
 
 use stat command to display more information about the file created by touch, including inode information
 
@@ -321,7 +321,7 @@ First 3 bits -> u, next 3 bits -> g, final 3 bits -> o
 -rw-rw-rw- 1 smith 127 Jan 20 1:24 primer
 ```
 
-![](e8006866/5.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/5.jpg?sign=8b6fb1f51963fde0c2555064a0e1bc52&t=1622128357)
 
 #### Setting Permissions
 
@@ -411,7 +411,7 @@ journalctl
 ```
 
 use filter:
-![](e8006866/9.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/9.jpg?sign=6253debef79c22e400e508f2406044b3&t=1622128394)
 
 print to the screen only those lines that include the string filename.php
 
@@ -427,9 +427,9 @@ journalctl | grep filename.php | grep -v error
 
 pressing the **Tab** key tells Bash to display its best guess on the command line
 
-![](e8006866/10.jpg)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/10.jpg?sign=517c5c6f208097fde7bdcbdcdd567c70&t=1622128302)
 
-![](e8006866/11.png)
+![](https://6772-grp2020-4glv8fo5cd87cf9a-1302562267.tcb.qcloud.la/linux-fundaments/11.png?sign=51dcaa306103e5b13947ed72f1653d49&t=1622128311)
 
 
 
