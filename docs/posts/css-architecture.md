@@ -88,8 +88,6 @@ If you're working in the browser, and you spot a component that's misbehaving, y
 
 Noting the name of the component you switch to your editor, hit the key combo for "Quick open file", start typing "head", and there you go:
 
-![Quick open file](quick-open-file.png)
-
 This strict mapping from UI components to the corresponding source files is doubly useful if you're new on the team and don't know the architecture by heart yet: you don't need to, to be able to find the guts of the thing you're supposed to work on.
 
 There's a natural (but perhaps not immediately obvious) corollary to this: a single style file should only contain styles belonging to a single namespace. Why? Say we have a login form, that's only used within the `Header` component. On the JavaScript side, it's defined as a helper component within `Header.js`, and not exported anywhere. It might be tempting to declare a class name `myapp-LoginForm`, and sneak that into both `Header.js` and `Header.scss`. But let's say the new guy on the team is be tasked to fix a small layout issue in the login form, and inspects the element to figure out where to start. There is no `LoginForm.js` or `LoginForm.scss` to be found, and he has to resort to `grep` or guesswork to find the relevant source files. That is to say, if the login form warrants a separate namespace, split it into a separate component. Consistency is worth its weight in gold in projects of non-trivial size.
@@ -357,8 +355,6 @@ a {
 
 **There is no simple way to protect your components from such external abuse**, and this is where we often need to just:
 
-![Give up](give-up.gif)
-
 Luckily, you often have some control over the dependencies you use, and can simply look for a more well-behaved alternative.
 
 Also, I said there's no _simple_ way to protect your components from this. That doesn't mean there aren't ways. [There are ways, dude](https://www.youtube.com/watch?v=20wUS_bbOHY), they just come with various trade-offs:
@@ -423,8 +419,6 @@ This is in fact perfectly OK, as long as we don't allow breaching the child's sa
 We don't want to allow this, because we'd lose our safety net of local changes never having global repercussions. With the above code, `LoginForm.scss` is no longer the only place you need to check when modifying the appearance of the `LoginForm` component. Making changes gets scary again. So where do we draw the line between what's OK and what's a no-no?
 
 We want to respect the sandbox _inside_ each child component, as we don't want to rely on its implementation details. It's a black box to us. What's _outside_ the child component, conversely, is the sandbox of the parent, where it reigns supreme. The distinction between inside and outside emerges quite naturally from one of the most fundamental concepts in CSS: [the box model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model).
-
-![CSS Box Model](box-model.png)
 
 My analogies are terrible, but here goes: just like _being inside a country_ means being within its physical borders, we establish that a parent can effect styles on its (direct) children only outside the border of the component. That means properties related to positioning and dimensions (e.g. `position`, `margin`, `display`, `width`, `float`, `z-index` etc) are OK, while properties that reach inside the border (e.g. `border` itself, `padding`, `color`, `font` etc) are a no-no.
 

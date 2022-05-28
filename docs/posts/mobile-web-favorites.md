@@ -1498,8 +1498,6 @@ PC 上开启 fiddler，并在设置中勾选“allow remote computers to connect
 
 2. PC 上开启 fiddler，并在设置中勾选“allow remote computers to connect”
 
-![fiddler](img/01.png)
-
 3. 手机上设置代理，代理 IP 为 PC 的 IP 地址，端口为 8888（这是 fiddler 的默认端口）。通常手机上可以直接设置代理，如果没有，可以去下载一个叫 ProxyDroid 的 APP 来实现代理的设置。
 
 4. 此时你会发现，用手机上网，走的其实是 PC 上的 fiddler，所有的请求包都会在 fiddler 中列出来，配合 willow 使用，即可实现配 host，甚至是反向代理的操作。
