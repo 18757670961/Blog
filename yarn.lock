@@ -4315,7 +4315,7 @@ vuepress-plugin-giscus@2.0.0-alpha.23:
     "@vuepress/utils" "2.0.0-beta.45"
     vue "^3.2.33"
 
-vuepress-theme-gungnir@^2.0.0-alpha.23:
+vuepress-theme-gungnir@^2.0.0-alpha.20:
   version "2.0.0-alpha.23"
   resolved "https://registry.npmmirror.com/vuepress-theme-gungnir/-/vuepress-theme-gungnir-2.0.0-alpha.23.tgz#321e0830a0e2330e100d1c55a16e0f255cbcea34"
   integrity sha512-II3DvBfxHiz/+o1K+KxDW9FaMvMexiKRQXTnMMFHRHIg3ETd+5swcjmJCvKDRA11mLM+TvAw6sdmbS/vpIO98A==
@@ -4363,7 +4363,7 @@ vuepress-vite@2.0.0-beta.46:
     "@vuepress/core" "2.0.0-beta.46"
     "@vuepress/theme-default" "2.0.0-beta.46"
 
-vuepress@^2.0.0-beta.46:
+vuepress@^2.0.0-beta.39:
   version "2.0.0-beta.46"
   resolved "https://registry.npmmirror.com/vuepress/-/vuepress-2.0.0-beta.46.tgz#855d4a451d75438d5c0e7dfc0284b61aa3b792cd"
   integrity sha512-5aDb1PiSjU4w/66YnQkaodcocAwkGEjtPv7Ux4dqEh8W+IjVqYcedg2syI5NuBrcAkNh9uq/6CTFibrZ6eyR2w==
