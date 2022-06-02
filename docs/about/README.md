@@ -15,12 +15,11 @@ hide: true
 - 男
 - 浙江金华
 - 1999-11-19 天蝎
-- UNNC (CS) -> UCIer (MSWE)
-- Web 攻城狮
-- 平面设计/插画 爱好者
+- UNNC (CS) -> UCI (MSWE)
+- Web 前端攻城狮
+- 平面设计爱好者
 - 吉他爱好者
 - 各类原声爱好者
-- ACG 爱好者 (二次元及以上不搞)
 - HIFI 爱好者
 - 数码产品爱好者
 - 轻度完美主义者
@@ -63,7 +62,8 @@ hide: true
 
 ### Internship
 
-- TapTap, TDS (Frontend engineer)
+- TapTap, TDS (Frontend engineer) 2022.2 - 2022.4
+- Kuaishou, Beijing (Frontend engineer) 2021.8 - 2021.11
 
 > 世界上所有的人终其一生, 都在寻求某个宝贵的东西, 但能找到的人不多. 即使幸运地找到了, 那东西也大多收到了致命的损伤. 但是, 我们必须继续寻求. 因为不这么做, 活着的意义就不复存在.
 >
