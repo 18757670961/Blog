@@ -81,7 +81,7 @@ export default defineUserConfig({
       },
       {
         text: 'Resume',
-        link: 'https://lc-gluttony.s3.amazonaws.com/5Y6XfcEGs057/M9EpTK74LYVtJa3CxatzfD3iN7kWWxh8/%E5%90%95%E6%9B%99%E5%85%89cv.pdf',
+        link: 'https://bearfoundersfiles.s3.amazonaws.com/media/files/user_files/f09a7d2858434a3abc2a3015e5e3f942.pdf',
         icon: 'ai-cv-square',
       },
     ],
